@@ -30,7 +30,7 @@ public:
     }
 };
 int main(){
-    vector<vector<int>> gain = {{1,2,3},{3,2,1}};
+    vector<vector<int>> gain = {{1,2,3},{3,2,1}, {3,3,0}};
     Solution obj;
     cout << obj.maximumWealth(gain) << endl;
 }
