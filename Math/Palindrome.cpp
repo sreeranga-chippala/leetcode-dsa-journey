@@ -68,8 +68,8 @@ public:
         return original == reversed;
     }
 };
-
 int main(){
     Solution obj;
     cout << obj.isPalindrome(121) << endl;
+    cout << obj.isPalindrome(-121) << endl;
 }
