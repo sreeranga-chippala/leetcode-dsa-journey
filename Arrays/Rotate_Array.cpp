@@ -20,6 +20,7 @@ Steps:
 2. Reverse the first k elements
 3. Reverse the remaining elements
 
+optimal : 
 Time Complexity: O(n)
 Space Complexity: O(1)
 

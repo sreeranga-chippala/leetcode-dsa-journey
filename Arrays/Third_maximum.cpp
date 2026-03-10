@@ -20,6 +20,7 @@ third  → third largest
 
 Traverse the array and update these values.
 
+optimal : 
 Time Complexity: O(n)
 Space Complexity: O(1)
 
