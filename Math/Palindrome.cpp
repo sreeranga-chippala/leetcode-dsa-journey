@@ -51,8 +51,8 @@ public:
         long long original = x;
         long long reversed = 0;
         long long digit;
-
-        // Negative numbers are not palindrome
+        // check for negative values
+        
         if(x < 0)
             return false;
 
