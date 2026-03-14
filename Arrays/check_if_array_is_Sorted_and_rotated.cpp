@@ -1,7 +1,6 @@
 /*
 Problem: Check if Array Is Sorted and Rotated
 LeetCode: https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/
-
 Goal:
 Check if the array was originally sorted in non-decreasing order
 and then rotated.
@@ -14,7 +13,6 @@ Original sorted array:
 
 After rotation:
 [3,4,5,1,2]
-
 Approach:
 1. Count how many times nums[i] > nums[i+1].
 2. Use modulo to compare the last and first elements.
