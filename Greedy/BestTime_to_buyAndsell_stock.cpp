@@ -14,7 +14,6 @@ Space Complexity: O(1)
 */
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 class Solution {
