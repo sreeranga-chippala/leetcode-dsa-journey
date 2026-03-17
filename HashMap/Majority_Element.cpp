@@ -1,10 +1,8 @@
 /*
 Problem: Majority Element
 LeetCode: https://leetcode.com/problems/majority-element/
-
 Goal:
 Find the element that appears more than n/2 times.
-
 Approach:
 Use a hash map to count frequency of elements.
 If any element appears more than n/2 times,
