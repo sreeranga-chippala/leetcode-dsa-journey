@@ -37,7 +37,6 @@ public:
 
             char cs = s[i];
             char ct = t[i];
-
             // check consistency
             if(s2t.count(cs) && s2t[cs] != ct)
                 return false;
