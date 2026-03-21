@@ -5,7 +5,7 @@ LeetCode: https://leetcode.com/problems/sort-colors/
 Goal:
 Sort the array containing only 0,1,2.
 
-Your Approach:
+My Approach:
 Bubble Sort.
 
 Idea:
