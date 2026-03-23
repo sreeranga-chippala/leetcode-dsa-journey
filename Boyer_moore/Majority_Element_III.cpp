@@ -33,6 +33,7 @@ public:
         int count1 = 0, count2 = 0;
 
         // Phase 1: Find candidates
+        
         for(int num : nums){
 
             if(num == candidate1){
@@ -56,6 +57,7 @@ public:
         }
 
         // Phase 2: Verify candidates
+
         vector<int> result;
         count1 = count2 = 0;
 
@@ -82,6 +84,7 @@ int main(){
     vector<int> result = obj.majorityElement(nums);
 
     cout << "Majority Elements: ";
+
     for(int x : result){
         cout << x << " ";
     }
