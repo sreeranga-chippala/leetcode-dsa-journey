@@ -1,5 +1,6 @@
 /*
 Problem: Majority Element II
+
 LeetCode: https://leetcode.com/problems/majority-element-ii/
 
 Goal:
@@ -9,16 +10,20 @@ Key Insight:
 - At most 2 elements can appear more than n/3 times.
 
 Approach:
+
 Boyer-Moore Voting Algorithm (Extended)
 
 Phase 1:
+
 Find potential candidates
 
 Phase 2:
+
 Verify actual counts
 
 Time Complexity: O(n)
 Space Complexity: O(1)
+
 */
 
 #include <iostream>
