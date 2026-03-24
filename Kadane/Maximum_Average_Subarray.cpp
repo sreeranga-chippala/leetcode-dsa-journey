@@ -1,5 +1,6 @@
 /*
 Problem: Maximum Average Subarray I
+
 LeetCode: https://leetcode.com/problems/maximum-average-subarray-i/
 
 Goal:
@@ -15,6 +16,7 @@ Fixed Sliding Window
 
 Time Complexity: O(n)
 Space Complexity: O(1)
+
 */
 
 #include <iostream>
