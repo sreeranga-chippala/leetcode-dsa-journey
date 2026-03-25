@@ -1,13 +1,11 @@
 /*
 Problem: Longest Substring Without Repeating Characters
 LeetCode: https://leetcode.com/problems/longest-substring-without-repeating-characters/
-
 Goal:
 Find the length of the longest substring without repeating characters.
 
 Approach:
 Sliding Window + HashMap
-
 - Use two pointers: left and right
 - Expand window using right
 - If duplicate found, move left pointer
