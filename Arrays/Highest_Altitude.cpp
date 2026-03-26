@@ -1,10 +1,12 @@
 /*
 Problem: Find the Highest Altitude
+
 LeetCode: https://leetcode.com/problems/find-the-highest-altitude/
 
 Pattern: Prefix Sum / Array Traversal
 
 Time Complexity: O(n)
+
 Space Complexity: O(1)
 
 Date: 04-03-2026
