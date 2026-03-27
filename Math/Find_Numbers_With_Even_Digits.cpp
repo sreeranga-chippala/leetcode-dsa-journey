@@ -3,12 +3,14 @@ Problem: Find Numbers with Even Number of Digits
 LeetCode: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
 
 Approach:
+
 1. Traverse the array of numbers.
 2. For each number, count how many digits it contains.
 3. If the digit count is even, increase the counter.
 4. Return the final count.
 
 Example:
+
 nums = [12,345,2,6,7896]
 
 12   -> 2 digits (even)
@@ -26,7 +28,7 @@ d = number of digits in each number
 Space Complexity: O(1)
 No extra space used.
 
-Date: Day 3 of LeetCode Journey
+
 */
 #include <vector>
 #include <iostream>
