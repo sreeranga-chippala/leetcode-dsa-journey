@@ -3,13 +3,16 @@ Problem: Running Sum of 1D Array
 LeetCode: https://leetcode.com/problems/running-sum-of-1d-array/
 
 Approach:
+
 The running sum of an array means each element at index i
 contains the sum of all elements from index 0 to i.
 
 Example:
+
 nums = [1,2,3,4]
 
 Running sum calculation:
+
 1
 1 + 2 = 3
 3 + 3 = 6
