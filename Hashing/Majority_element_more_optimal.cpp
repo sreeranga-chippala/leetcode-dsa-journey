@@ -1,11 +1,15 @@
 /*
+
 Problem: Majority Element
 LeetCode: https://leetcode.com/problems/majority-element/
 
 Goal:
+
 Find the element that appears more than n/2 times.
 Boyer-Moore Voting Algorithm (Elite solution)
 This is the important one.
+
+
 Idea:
 
 The majority element cancels out all other elements.
@@ -39,6 +43,7 @@ The remaining candidate is the majority element.
 
 Time Complexity: O(n)
 Space Complexity: O(1)
+
 */
 #include <iostream>
 #include <vector>
