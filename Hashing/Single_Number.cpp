@@ -1,4 +1,5 @@
 /*
+
 Problem: Single Number
 LeetCode: https://leetcode.com/problems/single-number/
 
@@ -6,6 +7,7 @@ Goal:
 Find the element that appears only once.
 
 Approach:
+
 HashMap Frequency Counting
 
 - Count occurrences of each number
@@ -13,6 +15,7 @@ HashMap Frequency Counting
 
 Time Complexity: O(n)
 Space Complexity: O(n)
+
 */
 
 #include <iostream>
