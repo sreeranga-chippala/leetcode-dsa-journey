@@ -2,8 +2,10 @@
 Problem: Frequency of the Most Frequent Element
 LeetCode: https://leetcode.com/problems/frequency-of-the-most-frequent-element/
 
+
 Goal:
 Maximize frequency by increasing elements with at most k operations.
+
 
 Approach:
 Sorting + Sliding Window
