@@ -29,8 +29,6 @@ public:
         int end = s.size() - 1;
 
         while(start < end){
-
-            // swap characters
             char temp = s[start];
             s[start] = s[end];
             s[end] = temp;
