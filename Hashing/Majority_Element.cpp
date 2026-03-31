@@ -12,6 +12,7 @@ If any element appears more than n/2 times,
 return that element.
 
 Time Complexity: O(n)
+
 Space Complexity: O(n)
 
 */
