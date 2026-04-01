@@ -1,6 +1,5 @@
 /*
 Problem: Majority Element II
-
 LeetCode: https://leetcode.com/problems/majority-element-ii/
 
 Goal:
