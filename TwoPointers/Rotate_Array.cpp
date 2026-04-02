@@ -24,7 +24,7 @@ optimal :
 Time Complexity: O(n)
 Space Complexity: O(1)
 
-Day 7 - LeetCode Journey
+
 */
 
 #include <iostream>
