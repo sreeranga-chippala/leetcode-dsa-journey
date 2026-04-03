@@ -1,5 +1,4 @@
 /*
-
 Problem: Sort Colors
 LeetCode: https://leetcode.com/problems/sort-colors/
 
@@ -15,7 +14,6 @@ if they are in the wrong order.
 
 Time Complexity: O(n²)
 Space Complexity: O(1)
-
 */
 #include <iostream>
 #include <vector>
