@@ -1,4 +1,5 @@
 /*
+
 Problem: Majority Element II
 LeetCode: https://leetcode.com/problems/majority-element-ii/
 
@@ -13,11 +14,9 @@ Approach:
 Boyer-Moore Voting Algorithm (Extended)
 
 Phase 1:
-
 Find potential candidates
 
 Phase 2:
-
 Verify actual counts
 
 Time Complexity: O(n)
