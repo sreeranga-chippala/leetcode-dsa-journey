@@ -1,4 +1,5 @@
 /*
+
 Problem: Remove Outermost Parentheses
 
 LeetCode: https://leetcode.com/problems/remove-outermost-parentheses/
@@ -22,6 +23,7 @@ Removing outermost means skipping first and last char of that block.
 
 Time Complexity: O(n)
 Space Complexity: O(n)
+
 */
 
 #include <iostream>
