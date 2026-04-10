@@ -23,6 +23,19 @@ Key Insight:
 
 Time Complexity: O(n)
 Space Complexity: O(1)
+
+In Python : 
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        # 1. split() automatically handles multiple spaces and trims whitespace
+        words = s.split()
+        
+        # 2. Reverse the list of words
+        words.reverse() # or words[::-1]
+        
+        # 3. Join the words with a single space and return
+        return " ".join(words)
+
 */
 
 #include <iostream>
