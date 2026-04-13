@@ -1,6 +1,5 @@
 /*
 Problem: Assign Cookies
-
 LeetCode: https://leetcode.com/problems/assign-cookies/
 
 Goal:
