@@ -23,6 +23,25 @@ Greedy (Prioritize Larger Change First)
 Key Insight:
 Always preserve smaller denominations ($5) when possible.
 
+PseudoCode:
+
+if bill == 5:
+    five++
+
+elif bill == 10:
+    if five == 0 → return false
+    five--, ten++
+
+elif bill == 20:
+    if ten > 0 and five > 0:
+        ten--, five--
+    elif five >= 3:
+        five -= 3
+    else:
+        return false
+
+Complexity Analysis: 
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
