@@ -25,6 +25,30 @@ Key Insight:
 Check overflow during building:
     result = result * 10 + digit
 
+Pseudocode:
+initialize i = 0
+initialize result = 0
+initialize sign = +1
+
+skip all leading spaces
+
+if current character is '-' → sign = -1, move i
+else if '+' → move i
+
+while current character is a digit:
+    digit = current character - '0'
+
+    // check overflow before updating result
+    if result > (INT_MAX - digit) / 10:
+        if sign == +1 → return INT_MAX
+        else → return INT_MIN
+
+    result = result * 10 + digit
+    move i forward
+
+return result * sign
+
+Complexity Analysis:
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
