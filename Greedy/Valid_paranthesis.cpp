@@ -12,6 +12,37 @@ Greedy + Range Tracking
 - low  → minimum possible open brackets
 - high → maximum possible open brackets
 
+Pseudocode:
+
+initialize low = 0
+initialize high = 0
+
+for each character c in string:
+
+    if c == '(':
+        low++
+        high++
+
+    else if c == ')':
+        low--
+        high--
+
+    else (c == '*'):
+        low--      // treat as ')'
+        high++     // treat as '('
+
+    if high < 0:
+        return false
+
+    if low < 0:
+        low = 0
+
+if low == 0:
+    return true
+else:
+    return false
+
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
