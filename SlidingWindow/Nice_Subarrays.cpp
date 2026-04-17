@@ -1,4 +1,5 @@
 /*
+
 Problem: Count Number of Nice Subarrays
 
 LeetCode: https://leetcode.com/problems/count-number-of-nice-subarrays/
@@ -21,6 +22,7 @@ we can extend it leftwards to form multiple valid subarrays.
 
 Time Complexity: O(n)
 Space Complexity: O(1)
+
 */
 
 #include <iostream>
