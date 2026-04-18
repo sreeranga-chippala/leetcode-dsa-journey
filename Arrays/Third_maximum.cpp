@@ -53,10 +53,12 @@ public:
                 second = first;
                 first = num;
             }
+
             else if(num > second){
                 third = second;
                 second = num;
             }
+            
             else if(num > third){
                 third = num;
             }
