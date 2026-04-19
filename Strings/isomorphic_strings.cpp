@@ -1,4 +1,5 @@
 /*
+
 Problem: Isomorphic Strings
 LeetCode: https://leetcode.com/problems/isomorphic-strings/
 
@@ -16,6 +17,7 @@ t → s mapping
 
 Time Complexity: O(n)
 Space Complexity: O(n)
+
 */
 
 #include <iostream>
