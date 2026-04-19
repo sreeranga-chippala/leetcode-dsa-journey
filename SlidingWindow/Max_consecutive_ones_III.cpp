@@ -1,4 +1,5 @@
 /*
+
 Problem: Max Consecutive Ones III
 
 LeetCode: https://leetcode.com/problems/max-consecutive-ones-iii/
@@ -21,6 +22,7 @@ Maintain a valid window where at most k zeros are flipped.
 
 Time Complexity: O(n)
 Space Complexity: O(1)
+
 */
 
 #include <iostream>
@@ -32,7 +34,7 @@ public:
     int longestOnes(vector<int>& nums, int k) {
 
         int i = 0;  // Left pointer
-        int j;
+        int j = 0;
 
         for(j = 0; j < nums.size(); j++){
 
