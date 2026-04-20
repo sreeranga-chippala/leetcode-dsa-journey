@@ -18,6 +18,40 @@ Key Insight:
 prefix counts how many redundant elements we can drop
 from the left while keeping exactly k distinct.
 
+PseudoCode : 
+
+initialize start = 0
+initialize prefix = 0
+initialize total = 0
+initialize distinct_count = 0
+initialize map counts
+
+for each end in array:
+
+    if counts[current] == 0:
+        distinct_count++
+
+    counts[current]++
+
+    if distinct_count > k:
+        decrease counts at start
+        move start forward
+        reset prefix = 0
+        if count becomes 0:
+            distinct_count--
+
+    while counts[start element] > 1:
+        decrease its count
+        move start forward
+        prefix++
+
+    if distinct_count == k:
+        total += (prefix + 1)
+
+return total
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(n)
 */
