@@ -18,6 +18,24 @@ Greedy (Track Maximum Reach)
 Key Insight:
 We don’t simulate jumps — we track the maximum reachable boundary.
 
+PseudoCode:
+
+initialize maxReach = 0
+
+for each index i:
+
+    if i > maxReach:
+        return false
+
+    update maxReach = max(maxReach, i + nums[i])
+
+    if maxReach >= last index:
+        return true
+
+return true
+
+Complexity Analysis :
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
