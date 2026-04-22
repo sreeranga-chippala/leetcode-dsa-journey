@@ -21,6 +21,26 @@ Key Insight:
 Choosing intervals with smallest end time leaves 
 maximum room for future intervals.
 
+PseudoCode :
+if intervals empty:
+    return 0
+
+sort intervals by end time
+
+set end_current = end of first interval
+set overlapping = 0
+
+for each interval from second onward:
+
+    if current start < end_current:
+        overlapping++
+    else:
+        update end_current = current end
+
+return overlapping
+
+Complexity Analysis :
+
 Time Complexity: O(n log n)
 Space Complexity: O(1)
 */
