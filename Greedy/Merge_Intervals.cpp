@@ -20,6 +20,25 @@ Greedy + Sorting
 Key Insight:
 Once sorted, overlapping intervals will be adjacent.
 
+PseudoCode : 
+if intervals empty:
+    return empty
+
+sort intervals by start time
+
+initialize result with first interval
+
+for each interval from second onward:
+
+    if current.start <= last_result.end:
+        last_result.end = max(last_result.end, current.end)
+    else:
+        add current interval to result
+
+return result
+
+Complexity Analysis : 
+
 Time Complexity: O(n log n)
 Space Complexity: O(n)
 */
