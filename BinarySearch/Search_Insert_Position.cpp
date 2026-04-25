@@ -18,6 +18,25 @@ Binary Search (Lower Bound)
 Key Insight:
 After binary search ends, 'low' always points to the correct insert position.
 
+PseudoCode : 
+
+initialize low = 0
+initialize high = n - 1
+
+while low <= high:
+
+    mid = low + (high - low) / 2
+
+    if nums[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
+
+return low
+
+
+Complexity Analysis : 
+
 Time Complexity: O(log n)
 Space Complexity: O(1)
 */
