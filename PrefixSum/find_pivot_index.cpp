@@ -1,4 +1,5 @@
 /*
+
 Problem: Find Pivot Index
 LeetCode: https://leetcode.com/problems/find-pivot-index/
 
@@ -23,6 +24,7 @@ Time Complexity: O(n)
 Space Complexity: O(1)
 
 Day 9 - LeetCode Journey
+
 */
 
 #include <iostream>
