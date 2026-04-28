@@ -19,6 +19,36 @@ Binary Search with Sorted Half Detection
 Key Insight:
 Even after rotation, at least one side is always sorted.
 
+PseudoCode : 
+
+initialize low = 0
+initialize high = n - 1
+
+while low <= high:
+
+    mid = low + (high - low) / 2
+
+    if nums[mid] == target:
+        return mid
+
+    if left half is sorted (nums[low] <= nums[mid]):
+
+        if target lies in left half:
+            move high = mid - 1
+        else:
+            move low = mid + 1
+
+    else (right half is sorted):
+
+        if target lies in right half:
+            move low = mid + 1
+        else:
+            move high = mid - 1
+
+return -1
+
+Complexity Analysis : 
+
 Time Complexity: O(log n)
 Space Complexity: O(1)
 */
