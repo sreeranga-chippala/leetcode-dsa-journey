@@ -1,5 +1,4 @@
 /*
-
 Problem: Majority Element II
 LeetCode: https://leetcode.com/problems/majority-element-ii/
 
@@ -21,7 +20,6 @@ Verify actual counts
 
 Time Complexity: O(n)
 Space Complexity: O(1)
-
 */
 
 #include <iostream>
