@@ -20,6 +20,39 @@ Key Insight:
 We only care about the most frequent character in the window.
 Other characters can be replaced using k operations.
 
+
+Pseudocode :
+
+FUNCTION characterReplacement(s, k)
+
+    create frequency array count[26] initialized to 0
+
+    i = 0
+    maxFreq = 0
+
+    FOR j from 0 to length(s)-1
+
+        currentChar = s[j]
+
+        increase frequency of currentChar
+
+        update maxFreq
+
+        windowSize = j - i + 1
+
+        replacementsNeeded = windowSize - maxFreq
+
+        IF replacementsNeeded > k
+
+            decrease frequency of s[i]
+
+            move left pointer
+            i = i + 1
+
+    RETURN (j - i)
+
+END FUNCTION
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
