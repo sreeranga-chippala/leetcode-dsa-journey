@@ -18,6 +18,7 @@ Key Insight:
 prefix counts how many redundant elements we can drop
 from the left while keeping exactly k distinct.
 
+
 PseudoCode : 
 
 initialize start = 0
