@@ -14,6 +14,39 @@ Sorting + Sliding Window
   nums[right] * window_size - sum <= k
 - If cost exceeds → shrink window
 
+Pseudocode : 
+
+FUNCTION maxFrequency(nums, k)
+
+    sort nums
+
+    left = 0
+    sum = 0
+    result = 0
+
+    FOR right from 0 to n-1
+
+        add nums[right] to sum
+
+        WHILE (
+            nums[right] * window_size - sum
+            ) > k
+
+            subtract nums[left] from sum
+            left = left + 1
+
+        END WHILE
+
+        result = maximum(
+                    result,
+                    right - left + 1
+                 )
+
+    END FOR
+
+    RETURN result
+
+    
 Time Complexity: O(n log n)
 Space Complexity: O(1)
 */
