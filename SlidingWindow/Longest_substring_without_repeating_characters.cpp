@@ -11,6 +11,40 @@ Sliding Window + HashMap
 - If duplicate found, move left pointer
 - Track max window size
 
+Pseudocode :
+
+FUNCTION lengthOfLongestSubstring(s)
+
+    create hashmap mp
+
+    left = 0
+    maxLength = 0
+
+    FOR right from 0 to length(s)-1
+
+        ch = s[right]
+
+        IF ch exists in mp
+           AND mp[ch] >= left
+
+            left = mp[ch] + 1
+
+        END IF
+
+        mp[ch] = right
+
+        maxLength =
+            maximum(
+                maxLength,
+                right - left + 1
+            )
+
+    END FOR
+
+    RETURN maxLength
+
+Complexity Analysis :
+
 Time Complexity: O(n)
 Space Complexity: O(n)
 */
