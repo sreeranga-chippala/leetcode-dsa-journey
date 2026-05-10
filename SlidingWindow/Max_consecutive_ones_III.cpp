@@ -20,6 +20,34 @@ Sliding Window (Variable Size)
 Key Insight:
 Maintain a valid window where at most k zeros are flipped.
 
+PseudoCode : 
+
+FUNCTION longestOnes(nums, k)
+
+    left = 0
+
+    FOR right from 0 to n-1
+
+        IF nums[right] == 0
+            k = k - 1
+        END IF
+
+        IF k < 0
+
+            IF nums[left] == 0
+                k = k + 1
+            END IF
+
+            left = left + 1
+
+        END IF
+
+    END FOR
+
+    RETURN right - left
+
+Complexity Analysis :
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 
