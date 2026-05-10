@@ -18,6 +18,33 @@ Approach:
 3. If element is 1 → increase current
 4. If element is 0 → reset current
 
+PseudoCode : 
+FUNCTION findMaxConsecutiveOnes(nums)
+
+    current = 0
+    maximum = 0
+
+    FOR each element in nums
+
+        IF element == 1
+
+            current = current + 1
+
+            maximum =
+                maximum(maximum, current)
+
+        ELSE
+
+            current = 0
+
+        END IF
+
+    END FOR
+
+    RETURN maximum
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
