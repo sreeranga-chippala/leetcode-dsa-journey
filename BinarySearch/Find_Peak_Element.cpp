@@ -22,6 +22,28 @@ Binary Search on Slope Direction
 Key Insight:
 A peak always exists in the direction of the increasing slope.
 
+PseudoCode : 
+
+initialize low = 0
+initialize high = n - 1
+
+while low < high:
+
+    mid = low + (high - low) / 2
+
+    if nums[mid] < nums[mid + 1]:
+        move to right half
+        low = mid + 1
+
+    else:
+        move to left half (including mid)
+        high = mid
+
+return low
+
+
+Complexity Analysis : 
+
 Time Complexity: O(log n)
 Space Complexity: O(1)
 */
