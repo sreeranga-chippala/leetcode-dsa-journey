@@ -20,6 +20,41 @@ Then:
 [1] + [6,1]
 [6,1] + [5]
 
+PseudoCode : 
+FUNCTION maxScore(cardPoints, k)
+
+    n = size of cardPoints
+
+    currentSum = 0
+    maximumSum = 0
+
+    left = k - 1
+    right = n - 1
+
+    FOR i from 0 to k-1
+        currentSum += cardPoints[i]
+    END FOR
+
+    maximumSum = currentSum
+
+    WHILE left >= 0
+
+        currentSum -= cardPoints[left]
+
+        currentSum += cardPoints[right]
+
+        maximumSum =
+            maximum(maximumSum, currentSum)
+
+        left = left - 1
+        right = right - 1
+
+    END WHILE
+
+    RETURN maximumSum
+
+Complexity Analysis : 
+
 Time Complexity: O(k)
 Space Complexity: O(1)
 */
