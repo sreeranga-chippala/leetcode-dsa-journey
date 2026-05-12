@@ -26,6 +26,40 @@ Key Insight:
 Duplicates can destroy the ability to identify
 which half is sorted.
 
+PseudoCode : 
+
+initialize low = 0
+initialize high = n - 1
+
+while low <= high:
+
+    mid = low + (high - low) / 2
+
+    if nums[mid] == target:
+        return true
+
+    if nums[low] == nums[mid] == nums[high]:
+        low++
+        high--
+
+    else if left half is sorted:
+
+        if target lies in left half:
+            move left
+        else:
+            move right
+
+    else:
+
+        if target lies in right half:
+            move right
+        else:
+            move left
+
+return false
+
+Complexity Analysis : 
+
 Time Complexity:
 - Average: O(log n)
 - Worst Case: O(n) (due to duplicates)
