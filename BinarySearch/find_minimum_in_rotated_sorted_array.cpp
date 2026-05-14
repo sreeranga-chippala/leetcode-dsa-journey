@@ -24,6 +24,28 @@ nums[mid] <= nums[high]
 Key Insight:
 The minimum element is the point where sorted order breaks.
 
+PseudoCode : 
+
+initialize low = 0
+initialize high = n - 1
+
+while low < high:
+
+    mid = low + (high - low) / 2
+
+    if nums[mid] > nums[high]:
+        move right
+        low = mid + 1
+
+    else:
+        move left (including mid)
+        high = mid
+
+return nums[low]
+
+
+Complexity Analysis : 
+
 Time Complexity: O(log n)
 Space Complexity: O(1)
 */
