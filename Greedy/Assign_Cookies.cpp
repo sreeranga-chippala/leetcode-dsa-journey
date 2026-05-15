@@ -27,6 +27,37 @@ Greedy + Sorting
 Key Insight:
 Always satisfy the least greedy child first using the smallest possible cookie.
 
+PseudoCode : 
+
+FUNCTION findContentChildren(g, s)
+
+    sort g
+    sort s
+
+    content = 0
+
+    i = 0    // child pointer
+    j = 0    // cookie pointer
+
+    WHILE i < size(g)
+          AND j < size(s)
+
+        IF s[j] >= g[i]
+
+            content = content + 1
+
+            i = i + 1
+
+        END IF
+
+        j = j + 1
+
+    END WHILE
+
+    RETURN content
+
+Complexity Analysis :
+ 
 Time Complexity: O(n log n + m log m)
 Space Complexity: O(1) (ignoring sort space)
 
