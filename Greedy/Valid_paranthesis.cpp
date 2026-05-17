@@ -7,6 +7,7 @@ Goal:
 Check if a string with '(', ')', '*' can be valid.
 
 Approach:
+
 Greedy + Range Tracking
 
 - low  → minimum possible open brackets
