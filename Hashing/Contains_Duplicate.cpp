@@ -5,6 +5,7 @@ LeetCode: https://leetcode.com/problems/contains-duplicate/
 Goal:
 Check if an array contains duplicate elements.
 
+
 Example:
 nums = [1,2,3,1]
 Output: true
