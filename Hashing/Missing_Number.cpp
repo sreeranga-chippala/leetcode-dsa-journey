@@ -5,6 +5,7 @@ LeetCode: https://leetcode.com/problems/missing-number/
 Goal:
 Find the missing number from the range [0, n].
 
+
 Example:
 nums = [3,0,1]
 
