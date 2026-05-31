@@ -30,6 +30,30 @@ Key Insight:
 As days increase, more flowers bloom.
 So the ability to make bouquets is monotonic.
 
+Pseudocode :
+
+if m * k > total flowers:
+    return -1
+
+low = minimum bloom day
+high = maximum bloom day
+
+while low < high:
+
+    mid = low + (high - low) / 2
+
+    if bouquets can be made by day = mid:
+        try smaller day
+        high = mid
+
+    else:
+        try larger day
+        low = mid + 1
+
+return low
+
+Complexity Analysis : 
+
 Time Complexity: O(n log D)
     n = number of flowers
     D = max bloom day
