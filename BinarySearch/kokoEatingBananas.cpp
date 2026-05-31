@@ -4,6 +4,7 @@ Problem: Koko Eating Bananas
 LeetCode: https://leetcode.com/problems/koko-eating-bananas/
 
 Goal:
+
 Find the minimum eating speed (bananas/hour)
 such that Koko can finish all bananas within h hours.
 
