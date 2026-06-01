@@ -33,6 +33,33 @@ the total sum decreases.
 This creates a monotonic pattern suitable
 for binary search.
 
+Pseudocode : 
+
+low = 1
+high = maximum element
+
+while low <= high:
+
+    mid = low + (high - low) / 2
+
+    calculate:
+        sum of ceil(num / mid)
+
+    if sum <= threshold:
+        divisor works
+        try smaller divisor
+        high = mid - 1
+
+    else:
+        divisor too small
+        try larger divisor
+        low = mid + 1
+
+return low
+
+
+Complexity Analysis : 
+
 Time Complexity: O(n log M)
     n = number of elements
     M = maximum element
