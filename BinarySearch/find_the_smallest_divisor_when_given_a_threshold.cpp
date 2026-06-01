@@ -65,6 +65,13 @@ Time Complexity: O(n log M)
     M = maximum element
 
 Space Complexity: O(1)
+
+Key for this type of Questions : 
+
+1. Search over possible answers
+2. Write a Can(answer) check
+3. Identify monotonic behavior
+4. Find smallest/largest valid answer
 */
 
 #include <iostream>
