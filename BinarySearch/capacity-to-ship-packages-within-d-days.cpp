@@ -37,6 +37,44 @@ days needed decreases.
 
 This monotonic behavior enables binary search.
 
+PseudoCode : 
+
+Feasibility Function:
+    daysNeeded = 1
+    currentLoad = 0
+
+    for each package:
+
+        if currentLoad + package > capacity:
+            daysNeeded++
+            currentLoad = package
+
+        else:
+            currentLoad += package
+
+    return (daysNeeded <= days)
+
+Main Function:
+
+    low = maximum package weight
+    high = sum of all package weights
+
+    while low < high:
+
+        mid = low + (high - low) / 2
+
+        if capacity = mid can ship within given days:
+            try smaller capacity
+            high = mid
+
+        else:
+            capacity too small
+            low = mid + 1
+
+    return low
+
+Complexity Analysis : 
+
 Time Complexity: O(n log S)
     n = number of packages
     S = sum of all weights
