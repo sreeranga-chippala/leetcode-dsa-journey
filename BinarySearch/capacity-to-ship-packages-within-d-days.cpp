@@ -82,67 +82,52 @@ Time Complexity: O(n log S)
 Space Complexity: O(1)
 */
 
-#include <iostream>
 #include <vector>
 #include <algorithm>
+
 using namespace std;
 
 class Solution {
 public:
 
-    bool canShip(vector<int>& weights, int capacity, int days){
-
-        int daysNeeded = 1;
+    bool canShip(vector<int>& weights, int mid, int days){
+        int daysNeeded = 1; // Start on day 1
         int currentWeight = 0;
 
-        for(int weight : weights){
-
-            // Start a new day
-            if(currentWeight + weight > capacity){
-                daysNeeded++;
-                currentWeight = weight;
-            }
-            else{
-                currentWeight += weight;
+        for(int weight : weights) {
+            // If adding this package exceeds the ship's capacity (mid)
+            if (currentWeight + weight > mid) {
+                daysNeeded++;       // Move to the next day
+                currentWeight = weight; // Put the package on the new day's ship
+            } else {
+                currentWeight += weight; // Pack it into the current day's ship
             }
         }
 
+        // Return true if we successfully loaded everything within the target days
         return daysNeeded <= days;
     }
 
     int shipWithinDays(vector<int>& weights, int days) {
-
+        int n = weights.size();
         int low = *max_element(weights.begin(), weights.end());
-
         int high = 0;
         for(int weight : weights){
             high += weight;
         }
 
-        while(low < high){
+        int ans = high; // To store our minimum valid capacity
 
-            int mid = low + (high - low) / 2;
+        while(low <= high){
+            int mid = low + (high - low)/2;
 
-            if(canShip(weights, mid, days)){
-                high = mid;
-            }
-            else{
-                low = mid + 1;
+            if(canShip(weights, mid, days)) {
+                ans = mid;        // This capacity works, record it!
+                high = mid - 1;   // Try to find an even smaller capacity on the left
+            } else {
+                low = mid + 1;    // The capacity is too small, check the right side
             }
         }
-
-        return low;
+        return ans;
     }
 };
-
-int main(){
-    Solution obj;
-
-    vector<int> weights = {1,2,3,4,5,6,7,8,9,10};
-    int days = 5;
-
-    cout << "Minimum Capacity: "
-         << obj.shipWithinDays(weights, days) << endl;
-
-    return 0;
-}
