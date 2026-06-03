@@ -45,6 +45,27 @@ After binary search:
 Answer:
     low + k
 
+PseudoCode : 
+
+low = 0
+high = n - 1
+
+while low <= high:
+
+    mid = low + (high - low) / 2
+
+    missing = arr[mid] - (mid + 1)
+
+    if missing < k:
+        low = mid + 1
+    else:
+        high = mid - 1
+
+return low + k
+
+
+Complexity Analysis : 
+
 Time Complexity: O(log n)
 Space Complexity: O(1)
 */
