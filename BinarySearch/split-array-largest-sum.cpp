@@ -39,6 +39,51 @@ required number of subarrays decreases.
 
 This monotonic behavior allows binary search.
 
+PseudoCode : 
+
+Main Function:
+    low = maximum element
+    high = sum of all elements
+
+    answer = -1
+
+    while low <= high:
+
+        mid = low + (high - low) / 2
+
+        if split possible with max sum = mid:
+            answer = mid
+            try smaller maximum sum
+            high = mid - 1
+
+        else:
+            max sum too small
+            low = mid + 1
+
+    return answer
+
+Feasibility Function :
+    subArrayCount = 1
+    currentSum = 0
+
+    for each element:
+
+        if currentSum + element > maxSumLimit:
+
+            create new subarray
+            subArrayCount++
+            currentSum = element
+
+            if subArrayCount > k:
+                return false
+
+        else:
+            currentSum += element
+
+    return true
+
+Complexity Analysis : 
+
 Time Complexity: O(n log S)
     n = array size
     S = sum of array
