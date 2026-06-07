@@ -23,6 +23,41 @@ Key Insight:
 Number of connected components in the graph
 = Number of provinces.
 
+Pseudocode : 
+
+BFS Function:
+    mark start city visited
+
+    insert start city into queue
+
+    while queue not empty:
+
+        remove front city
+
+        for every city:
+
+            if connected and not visited:
+
+                mark visited
+
+                insert into queue
+Main Function :
+    components = 0
+
+    mark all cities unvisited
+
+    for each city:
+
+        if city not visited:
+
+            components++
+
+            perform BFS from this city
+
+    return components
+    
+Complexity Analysis : 
+
 Time Complexity: O(n²)
     n = number of cities
 
