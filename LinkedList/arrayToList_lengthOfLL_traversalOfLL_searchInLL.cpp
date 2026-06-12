@@ -18,6 +18,60 @@ Key Insight:
 Unlike arrays, linked lists do not support random access.
 We must traverse sequentially.
 
+PseudoCode :
+
+* Array → Linked List: 
+    if array is empty:
+        return null
+
+    create head node using first element
+
+    current = head
+
+    for each remaining element:
+
+        create new node
+
+        connect current.next to new node
+
+        move current forward
+
+    return head
+
+* Search in Linked List : 
+    current = head
+
+    while current is not null:
+
+        if current.data == key:
+            return true
+
+        move current to next node
+
+    return false
+
+* Length of Linked List:
+    count = 0
+
+    current = head
+
+    while current is not null:
+
+        count++
+
+        move current forward
+
+    return count
+* Traversal of Linked List : 
+    temp = head
+    while  temp is not null:
+        if temp is k then 
+            return k
+        else
+            temp = temp -> next
+            
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
