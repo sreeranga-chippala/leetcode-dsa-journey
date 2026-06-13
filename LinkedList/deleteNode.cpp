@@ -1,5 +1,4 @@
 /*
-
 Problem: Delete Node in a Linked List
 
 LeetCode:
@@ -56,9 +55,7 @@ DeleteNode(node):
 Complexity Analysis:
 
 Time Complexity: O(1)
-
 Space Complexity: O(1)
-
 */
 
 #include <iostream>
