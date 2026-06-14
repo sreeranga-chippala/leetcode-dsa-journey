@@ -29,6 +29,22 @@ Fast moves twice as fast as slow.
 So by the time fast finishes the list,
 slow has covered only half the distance.
 
+PseudoCode : 
+
+slow = head
+fast = head
+
+while fast exists
+and fast.next exists:
+
+    move slow by 1 step
+
+    move fast by 2 steps
+
+return slow
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
