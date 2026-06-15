@@ -26,6 +26,25 @@ Key Insight:
 Before changing links, always save the next node.
 Otherwise, the remaining list gets lost.
 
+PseudoCode : 
+
+previous = null
+current = head
+
+while current exists:
+
+    front = current.next
+
+    current.next = previous
+
+    previous = current
+
+    current = front
+
+return previous
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
