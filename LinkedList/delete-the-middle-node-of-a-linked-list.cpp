@@ -31,6 +31,31 @@ Delete middle node:
 Key Insight:
 Slow reaches the middle while fast reaches the end.
 
+PseudoCode :
+
+if list has 0 or 1 node:
+    return null
+
+slow = head
+fast = head
+prev = null
+
+while fast exists and fast.next exists:
+
+    prev = slow
+
+    move slow by 1 step
+
+    move fast by 2 steps
+
+prev.next = slow.next
+
+delete slow
+
+return head
+
+Complexity Analysis :
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
