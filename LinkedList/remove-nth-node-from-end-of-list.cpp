@@ -26,6 +26,34 @@ Maintain a gap of n nodes between fast and slow.
 When fast reaches the end, slow reaches the node
 just before the one to be deleted.
 
+PseudoCode : 
+
+fast = head
+slow = head
+
+move fast pointer n steps ahead
+
+if fast is NULL:
+    delete head
+    return new head
+
+while fast.next exists:
+
+    move fast one step
+
+    move slow one step
+
+nodeToDelete = slow.next
+
+slow.next = nodeToDelete.next
+
+delete nodeToDelete
+
+return head
+
+
+Complexity Analysis :
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
