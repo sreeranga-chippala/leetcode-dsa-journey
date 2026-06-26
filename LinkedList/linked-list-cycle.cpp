@@ -24,6 +24,27 @@ Key Insight:
 In a cyclic linked list, the faster pointer
 will eventually catch up with the slower pointer.
 
+Pseudocode : 
+
+if head is NULL:
+    return false
+
+slow = head
+fast = head
+
+while fast exists and fast.next exists:
+
+    move slow by 1 step
+
+    move fast by 2 steps
+
+    if slow == fast:
+        return true
+
+return false
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
