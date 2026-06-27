@@ -27,6 +27,41 @@ the distance from the head to the cycle start
 equals the distance from the meeting point
 to the cycle start.
 
+Pseudocode : 
+
+Phase 1: Detect Cycle 
+    if head is NULL:
+        return NULL
+
+    slow = head
+    fast = head
+
+    while fast exists and fast.next exists:
+
+        move slow by 1 step
+
+        move fast by 2 steps
+
+        if slow == fast:
+            cycle found
+            break
+
+    if no cycle:
+        return NULL
+
+Phase 2: Find Cycle Start 
+    entry = head
+
+    while entry != slow:
+
+        move entry by 1 step
+
+        move slow by 1 step
+
+    return entry
+    
+Complexity Analysis :
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
