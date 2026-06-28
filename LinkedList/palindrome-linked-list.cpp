@@ -20,6 +20,22 @@ Key Insight:
 Instead of using extra space, reverse only the
 second half of the list and compare both halves.
 
+PseudoCode :
+    find the middle of the linkedlist
+    first = head
+    second = reversed second half
+
+    while second exists:
+
+        if values are different:
+            return false
+
+        move both pointers
+
+    return true
+    
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
