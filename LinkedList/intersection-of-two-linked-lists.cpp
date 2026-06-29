@@ -29,6 +29,30 @@ By switching lists, both pointers travel
 the same total distance (lengthA + lengthB),
 eliminating any difference in list lengths.
 
+PseudoCode :
+
+if either list is empty:
+    return NULL
+
+pointerA = headA
+pointerB = headB
+
+while pointerA != pointerB:
+
+    if pointerA is NULL:
+        pointerA = headB
+    else:
+        pointerA = pointerA.next
+
+    if pointerB is NULL:
+        pointerB = headA
+    else:
+        pointerB = pointerB.next
+
+return pointerA
+
+Complexity Analysis : 
+
 Time Complexity: O(n + m)
 Space Complexity: O(1)
 */
