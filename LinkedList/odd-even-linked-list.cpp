@@ -27,6 +27,29 @@ Two Pointer Rearrangement
 Key Insight:
 We are rearranging node links, not node values.
 
+PseudoCode : 
+
+    if list has fewer than 3 nodes:
+        return head
+
+    odd = head
+    even = head.next
+    evenHead = even
+
+    while even exists and even.next exists:
+
+        odd.next = even.next
+        move odd forward
+
+        even.next = odd.next
+        move even forward
+
+    odd.next = evenHead
+
+    return head
+
+Complexity Analysis :
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
