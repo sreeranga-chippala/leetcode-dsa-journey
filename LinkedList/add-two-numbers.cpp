@@ -27,6 +27,39 @@ Key Insight:
 This is the same process as manual addition from right to left,
 keeping track of the carry after every digit.
 
+PseudoCode : 
+
+    create dummy node
+    tail = dummy
+    carry = 0
+
+    while first list exists
+    or second list exists
+    or carry exists:
+
+        sum = carry
+
+        if first list exists:
+            add current digit
+            move first pointer
+
+        if second list exists:
+            add current digit
+            move second pointer
+
+        carry = sum / 10
+
+        create new node with (sum % 10)
+
+        attach node to result
+
+        move tail
+
+    return dummy.next
+
+
+Complexity Analysis : 
+
 Time Complexity: O(max(n, m))
 Space Complexity: O(max(n, m))
 */
