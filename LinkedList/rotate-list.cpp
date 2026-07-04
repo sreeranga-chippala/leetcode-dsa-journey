@@ -36,6 +36,30 @@ Instead of rotating one step at a time,
 convert the list into a circle and break it
 at the correct position.
 
+PseudoCode :
+
+    if list is empty, has one node, or k = 0:
+        return head
+
+    find length and tail
+
+    k = k % length
+
+    if k == 0:
+        return head
+
+    connect tail to head
+
+    move to (length - k - 1)th node
+
+    newHead = next node
+
+    break the circular link
+
+    return newHead
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
