@@ -1,5 +1,6 @@
 /*
 Problem: Delete Head of a Doubly Linked List
+source : Strivers a-z DSA sheet
 
 Goal:
 Delete the first node and return
@@ -32,7 +33,7 @@ PseudoCode :
     delete temp
 
     return head
-    
+
 Complexity Analysis : 
 
 Time Complexity: O(1)
