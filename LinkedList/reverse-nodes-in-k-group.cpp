@@ -25,6 +25,49 @@ Key Insight:
 Reverse one group at a time while maintaining
 connections between consecutive groups.
 
+PseudoCode :
+
+Find kth Node {
+    move k-1 steps forward
+
+    if kth node exists:
+        return kth
+
+    return NULL
+}
+
+reverseKthGroup{
+    current = head
+    previousGroupTail = NULL
+
+    while current exists:
+
+        find kth node
+
+        if kth does not exist:
+
+            connect remaining nodes
+
+            stop
+
+        save next group
+
+        disconnect current group
+
+        reverse current group
+
+        connect previous group
+        with reversed group
+
+        update previousGroupTail
+
+        move to next group
+
+    return head
+}
+    
+Complexity Analysis :
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
