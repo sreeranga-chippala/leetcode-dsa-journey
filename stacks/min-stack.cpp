@@ -33,6 +33,37 @@ Key Insight:
 The top of minStack always stores the minimum
 element of the stack at that moment.
 
+PseudoCode :
+
+push(value){
+    push value into main stack
+
+    if min stack is empty
+    or value is smaller than current minimum:
+
+        push value into min stack
+
+    else:
+
+        push current minimum again
+}
+
+pop(){
+    pop from main stack
+
+    pop from min stack
+}
+
+top(){
+    return top of main stack
+}
+
+getMin(){
+    return top of min stack
+}
+    
+Complexity Analysis : 
+
 Time Complexity:
 push()   -> O(1)
 pop()    -> O(1)
