@@ -31,6 +31,31 @@ The last opening bracket encountered must be
 the first one to be closed (LIFO order),
 making a stack the ideal data structure.
 
+PseudoCode :
+    create empty stack
+
+    for each character:
+
+        if opening bracket:
+            push into stack
+
+        else:
+
+            if stack is empty:
+                return false
+
+            pop top element
+
+            if brackets do not match:
+                return false
+
+    if stack is empty:
+        return true
+
+    return false
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(n)
 */
