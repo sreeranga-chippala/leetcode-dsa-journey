@@ -1,37 +1,38 @@
 /*
-Problem: Min Stack
+Problem: Implement Queue using Stacks
 
 LeetCode:
-https://leetcode.com/problems/min-stack/
+https://leetcode.com/problems/implement-queue-using-stacks/
 
 Goal:
-Design a stack that supports the following operations
-in constant time:
+Implement a queue using only stack operations.
+
+The queue should support:
 
 - push()
 - pop()
-- top()
-- getMin()
+- peek()
+- empty()
 
 Approach:
 Two Stack Technique
 
-- mainStack stores all elements.
-- minStack stores the minimum element corresponding
-  to every position in mainStack.
+- stack1:
+    Used for insertion.
 
-For every push:
-- Push value into mainStack.
-- If value is smaller than the current minimum,
-  push value into minStack.
-- Otherwise, push the current minimum again.
+- stack2:
+    Used for deletion and front access.
 
-For every pop:
-- Pop from both stacks.
+Whenever stack2 becomes empty:
+- Transfer all elements from stack1 to stack2.
+- This reverses the order, making the oldest
+  element appear on top.
 
 Key Insight:
-The top of minStack always stores the minimum
-element of the stack at that moment.
+Each element is transferred at most once from
+stack1 to stack2, giving an amortized O(1)
+time complexity.
+
 
 PseudoCode : 
 
@@ -80,73 +81,82 @@ getMin() -> O(1)
 Space Complexity: O(n)
 */
 
+
 #include <iostream>
 #include <stack>
 using namespace std;
 
-class MinStack {
+class MyQueue {
 
-    stack<int> mainStack;
-    stack<int> minStack;
+    stack<int> stack1;
+    stack<int> stack2;
 
 public:
 
-    MinStack() {
+    MyQueue() {
 
     }
 
-    // Push element into stack
-    void push(int value) {
+    // Insert element into queue
+    void push(int x) {
 
-        mainStack.push(value);
+        stack1.push(x);
+    }
 
-        // New minimum found
-        if(minStack.empty() || value < minStack.top()){
-            minStack.push(value);
+    // Remove front element
+    int pop() {
+
+        // Transfer elements if needed
+        if(stack2.empty()){
+
+            while(!stack1.empty()){
+
+                stack2.push(stack1.top());
+                stack1.pop();
+            }
         }
-        else{
-            // Repeat current minimum
-            minStack.push(minStack.top());
+
+        int value = stack2.top();
+        stack2.pop();
+
+        return value;
+    }
+
+    // Return front element
+    int peek() {
+
+        // Transfer elements if needed
+        if(stack2.empty()){
+
+            while(!stack1.empty()){
+
+                stack2.push(stack1.top());
+                stack1.pop();
+            }
         }
+
+        return stack2.top();
     }
 
-    // Remove top element
-    void pop() {
+    // Check whether queue is empty
+    bool empty() {
 
-        if(!mainStack.empty()){
-
-            mainStack.pop();
-            minStack.pop();
-        }
-    }
-
-    // Return top element
-    int top() {
-
-        return mainStack.top();
-    }
-
-    // Return minimum element
-    int getMin() {
-
-        return minStack.top();
+        return stack1.empty() && stack2.empty();
     }
 };
 
 int main(){
 
-    MinStack obj;
+    MyQueue q;
 
-    obj.push(-2);
-    obj.push(0);
-    obj.push(-3);
+    q.push(1);
+    q.push(2);
 
-    cout << "Minimum: " << obj.getMin() << endl;
+    cout << "Front: " << q.peek() << endl;
 
-    obj.pop();
+    cout << "Removed: " << q.pop() << endl;
 
-    cout << "Top: " << obj.top() << endl;
-    cout << "Minimum: " << obj.getMin() << endl;
+    cout << "Empty? " << q.empty() << endl;
 
     return 0;
 }
