@@ -39,6 +39,29 @@ Key Insight:
 Instead of using a stack, maintain only the
 number of unmatched opening brackets.
 
+PseudoCode : 
+
+    required_closed = 0
+    required_open = 0
+
+    for each character:
+
+        if '(':
+            required_closed++
+
+        else:
+
+            if required_closed > 0:
+                required_closed--
+
+            else:
+                required_open++
+
+    return required_closed + required_open
+
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
