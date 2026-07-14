@@ -32,6 +32,36 @@ Key Insight:
 By rearranging elements during push,
 pop() and top() become O(1).
 
+PseudoCode : 
+
+push(x){
+    insert new element into queue2
+
+    move all elements from queue1
+    to queue2
+
+    swap queue1 and queue2
+}
+
+pop(){
+    if stack is empty:
+        return -1
+
+    remove front of queue1
+
+    return removed element
+}
+
+top(){
+    return front of queue1
+}
+
+empty(){
+    return whether queue1 is empty
+}
+    
+Complexity Analysis : 
+
 Time Complexity:
 push()  -> O(n)
 pop()   -> O(1)
