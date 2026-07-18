@@ -29,6 +29,37 @@ Instead of searching for the next greater element
 for every query independently, preprocess nums2
 once using a monotonic stack.
 
+PseudoCode :
+
+create empty stack
+create empty hash map
+
+for each element in nums2:
+
+    while stack is not empty
+    and current element > stack top:
+
+        map[stack top] = current element
+        pop stack
+
+    push current element
+
+create answer array
+
+for each element in nums1:
+
+    if element exists in map:
+
+        answer = mapped value
+
+    else:
+
+        answer = -1
+
+return answer
+
+Complexity Analysis :
+
 Time Complexity:
 O(n + m)
 
