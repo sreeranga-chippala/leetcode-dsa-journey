@@ -28,6 +28,32 @@ Traversing twice allows every element to
 consider elements at the beginning of the array
 after reaching the end.
 
+PseudoCode : 
+
+create answer array filled with -1
+
+create empty stack
+
+for i from (2*n - 1) down to 0:
+
+    current = nums[i % n]
+
+    while stack is not empty
+    and current >= stack top:
+
+        pop stack
+
+    if i < n
+    and stack is not empty:
+
+        answer[i] = stack top
+
+    push current into stack
+
+return answer
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(n)
 */
