@@ -33,8 +33,30 @@ Instead of generating all O(n²) subarrays,
 compute how many subarrays each element
 contributes to as the minimum.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+find Previous Smaller Element for every index
+
+find Next Smaller Element for every index
+
+sum = 0
+
+for every element:
+
+    left = current index - previous smaller index
+
+    right = next smaller index - current index
+
+    contribution =
+        left × right × current value
+
+    add contribution to answer
+
+return answer
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 
