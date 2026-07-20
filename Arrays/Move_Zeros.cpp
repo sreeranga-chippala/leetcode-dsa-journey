@@ -1,4 +1,5 @@
 /*
+
 Problem: Move Zeroes
 LeetCode: https://leetcode.com/problems/move-zeroes/
 
@@ -26,7 +27,6 @@ Approach:
 Time Complexity: O(n)
 Space Complexity: O(1)  (in-place modification)
 
-Date: Day 4 of LeetCode Journey
 */
 
 #include <vector>
