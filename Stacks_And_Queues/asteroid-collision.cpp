@@ -36,6 +36,36 @@ Key Insight:
 Only a right-moving asteroid can collide with
 a left-moving asteroid that appears later.
 
+PseudoCode :
+
+create empty stack
+
+for each asteroid:
+
+    if moving right:
+
+        push into stack
+
+    else:
+
+        while top is right-moving
+        and top is smaller:
+
+            pop stack
+
+        if stack is empty
+        or top is left-moving:
+
+            push current asteroid
+
+        else if both are equal:
+
+            pop stack
+
+return remaining stack as answer
+
+Complexity Analysis : 
+
 Time Complexity: O(n)
 Space Complexity: O(n)
 */
