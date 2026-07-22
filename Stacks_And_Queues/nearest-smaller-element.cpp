@@ -22,8 +22,32 @@ Key Insight:
 The stack always stores possible candidates for
 the nearest smaller element.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+create empty stack
+
+for each element:
+
+    while stack is not empty
+    and stack top >= current element:
+
+        pop stack
+
+    if stack is not empty:
+
+        answer = stack top
+
+    else:
+
+        answer = -1
+
+    push current element
+
+return answer
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 
