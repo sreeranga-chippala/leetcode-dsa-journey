@@ -48,8 +48,36 @@ Instead of iterating over every subarray,
 count how many subarrays use each element
 as their maximum and minimum.
 
-Time Complexity: O(n)
+PseudoCode :
 
+find Previous Greater Element
+
+find Next Greater Element
+
+find Previous Smaller Element
+
+find Next Smaller Element
+
+answer = 0
+
+for every element:
+
+    maximum contribution =
+        leftGreater × rightGreater × value
+
+    minimum contribution =
+        leftSmaller × rightSmaller × value
+
+    answer +=
+        maximum contribution
+        -
+        minimum contribution
+
+return answer
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 
