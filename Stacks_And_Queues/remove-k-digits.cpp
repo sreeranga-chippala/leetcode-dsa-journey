@@ -27,8 +27,41 @@ A larger digit appearing before a smaller digit
 should be removed first because it has a greater
 impact on the final number.
 
-Time Complexity: O(n)
+PseudoCode :
 
+create empty stack
+
+for each digit:
+
+    while k > 0
+    and stack not empty
+    and top > current digit:
+
+        pop stack
+        k--
+
+    push current digit
+
+while k > 0:
+
+    pop stack
+    k--
+
+build answer from stack
+
+remove leading zeros
+
+reverse answer
+
+if answer is empty:
+
+    return "0"
+
+return answer
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 
