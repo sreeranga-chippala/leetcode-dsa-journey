@@ -33,8 +33,28 @@ Treat every bar as the limiting (minimum) height
 of a rectangle and calculate the largest rectangle
 it can form.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+find Next Smaller Element
+
+find Previous Smaller Element
+
+maximumArea = 0
+
+for every bar:
+
+    width = next smaller - previous smaller - 1
+
+    area = height × width
+
+    update maximumArea
+
+return maximumArea
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 
