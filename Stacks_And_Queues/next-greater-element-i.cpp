@@ -61,14 +61,12 @@ return answer
 
 Complexity Analysis :
 
-Time Complexity:
-O(n + m)
+Time Complexity: O(n + m)
 
 n = nums2.size()
 m = nums1.size()
 
-Space Complexity:
-O(n)
+Space Complexity: O(n)
 */
 
 #include <iostream>
