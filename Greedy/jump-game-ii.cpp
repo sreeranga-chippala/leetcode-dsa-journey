@@ -35,8 +35,27 @@ reachable indices, similar to BFS. Once a level
 is fully explored, make one jump to the farthest
 reachable position.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+current_end = 0
+farthest = 0
+jumps = 0
+
+for each index from 0 to n-2:
+
+    update farthest
+
+    if current index reaches current_end:
+
+        jumps++
+
+        current_end = farthest
+
+return jumps
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(1)
 */
 
