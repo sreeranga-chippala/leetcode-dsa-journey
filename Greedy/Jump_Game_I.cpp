@@ -1,5 +1,4 @@
 /*
-
 Problem: Jump Game
 
 LeetCode: https://leetcode.com/problems/jump-game/
@@ -16,8 +15,7 @@ Greedy (Track Maximum Reach)
     → Otherwise update maxReach = max(maxReach, i + nums[i])
 - If maxReach reaches or exceeds last index → return true
 
-Key Insight
-:
+Key Insight :
 We don’t simulate jumps — we track the maximum reachable boundary.
 
 PseudoCode:
