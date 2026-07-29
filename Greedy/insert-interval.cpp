@@ -22,8 +22,50 @@ Key Insight:
 Since the intervals are already sorted, we only
 need one linear scan through the array.
 
-Time Complexity: O(n)
+PseudoCode :
 
+insertInterval(timeSlots, newSlot) {
+
+    ans = [];
+    i = 0;
+    n = timeSlots.size();
+
+    // First Part
+
+    while (i < n && timeSlots[i][1] < newSlot[0]) {
+        ans.push(timeSlots[i]);
+        i+=1;
+    }
+    
+    // Overlapping Part
+
+    start = INT_MAX;
+    end = -1;
+
+    while (i < n && timeSlots[i][0] <= newSlot[1]) {
+        if ( start == INT_MAX) {
+            start = timeSlots[i][0];
+        }
+        end = timeSlots[i][1]
+        i+=1;
+    }
+    
+    start = min(start,newSlot[0]);
+    end = max(end,newSlot[1]);
+    
+
+    ans.push({start,end});
+
+    // Remaining Part or Last Part
+    
+    while (i < n) {
+        ans.push(timeSlots[i]);
+        i+=1;
+    }
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 
