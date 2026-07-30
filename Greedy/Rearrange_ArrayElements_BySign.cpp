@@ -1,19 +1,60 @@
 /*
-
 Problem: Rearrange Array Elements by Sign
-LeetCode: https://leetcode.com/problems/rearrange-array-elements-by-sign/
+
+LeetCode:
+https://leetcode.com/problems/rearrange-array-elements-by-sign/
 
 Goal:
-Rearrange array so that positive and negative numbers alternate.
-
-Example:
-[3,1,-2,-5,2,-4] → [3,-2,1,-5,2,-4]
+Given an array containing an equal number of
+positive and negative integers, rearrange the
+array so that positive and negative numbers
+appear alternately, starting with a positive
+number.
 
 Approach:
-- Use two pointers:
-    positive → even indices (0,2,4...)
-    negative → odd indices (1,3,5...)
-- Place numbers accordingly
+Two Pointer Index Placement
+
+- Create a result array of the same size.
+- Maintain two indices:
+    - positiveIndex = 0 (even positions)
+    - negativeIndex = 1 (odd positions)
+- Traverse the input array once.
+- Place every positive number at the next even
+  position.
+- Place every negative number at the next odd
+  position.
+
+Key Insight:
+The problem guarantees an equal number of positive
+and negative numbers, so we can directly place
+each element into its correct position without
+additional checks.
+
+PseudoCode : 
+
+create result array
+
+positiveIndex = 0
+
+negativeIndex = 1
+
+for every element:
+
+    if positive:
+
+        place at positiveIndex
+
+        positiveIndex += 2
+
+    else:
+
+        place at negativeIndex
+
+        negativeIndex += 2
+
+return result
+
+Complexity Analysis : 
 
 Time Complexity: O(n)
 Space Complexity: O(n)
@@ -25,22 +66,27 @@ using namespace std;
 
 class Solution {
 public:
+
     vector<int> rearrangeArray(vector<int>& nums) {
 
-        vector<int> result(nums.size(), 0);
+        int n = nums.size();
 
-        int positive = 0; // even index
-        int negative = 1; // odd index
+        vector<int> result(n);
 
-        for(int i = 0; i < nums.size(); i++){
+        int positiveIndex = 0;
+        int negativeIndex = 1;
+
+        for(int i = 0; i < n; i++){
 
             if(nums[i] > 0){
-                result[positive] = nums[i];
-                positive += 2;
+
+                result[positiveIndex] = nums[i];
+                positiveIndex += 2;
             }
             else{
-                result[negative] = nums[i];
-                negative += 2;
+
+                result[negativeIndex] = nums[i];
+                negativeIndex += 2;
             }
         }
 
@@ -49,17 +95,16 @@ public:
 };
 
 int main(){
+
     Solution obj;
 
     vector<int> nums = {3,1,-2,-5,2,-4};
 
-    vector<int> result = obj.rearrangeArray(nums);
+    vector<int> ans = obj.rearrangeArray(nums);
 
-    cout << "Rearranged Array: ";
-    for(int x : result){
+    for(int x : ans){
         cout << x << " ";
     }
-    cout << endl;
 
     return 0;
 }
