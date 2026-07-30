@@ -1,6 +1,10 @@
 /*
 Problem: Shortest Job First (SJF)
 
+Source : Strivers DSA A-Z sheet
+
+        https://takeuforward.org/plus/dsa/problems/shortest-job-first?source=strivers-a2z-dsa-track
+
 Goal:
 Given the execution (or delivery) times of jobs,
 schedule them so that the average waiting time
@@ -30,8 +34,25 @@ Executing shorter jobs first minimizes the waiting
 time of longer jobs, producing the minimum average
 waiting time.
 
-Time Complexity: O(n log n)
+PseudoCode : 
 
+sort jobs in ascending order
+
+currentTime = 0
+
+totalWaitingTime = 0
+
+for every job:
+
+    totalWaitingTime += currentTime
+
+    currentTime += job duration
+
+return totalWaitingTime / number of jobs
+
+Complexity Analysis : 
+
+Time Complexity: O(n log n)
 Space Complexity: O(1)
 */
 
