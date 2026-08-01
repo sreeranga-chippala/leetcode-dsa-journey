@@ -24,8 +24,26 @@ Key Insight:
 Choosing the meeting that finishes earliest
 leaves the maximum time available for future meetings.
 
-Time Complexity: O(n log n)
+PseudoCode : 
 
+create (start, end) pairs
+
+sort by ending time
+
+select first meeting
+
+for remaining meetings:
+
+    if start > previous meeting end:
+
+        select meeting
+
+return selected meeting count
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n log n)
 Space Complexity: O(n)
 */
 
