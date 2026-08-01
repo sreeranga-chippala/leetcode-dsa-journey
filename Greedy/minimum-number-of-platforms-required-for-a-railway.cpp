@@ -24,8 +24,42 @@ The maximum number of trains present at the station
 at any instant equals the minimum number of platforms
 required.
 
-Time Complexity: O(n log n)
+PseudoCode : 
 
+sort arrival times
+
+sort departure times
+
+arrivalPointer = 0
+
+departurePointer = 0
+
+currentPlatforms = 0
+
+maximumPlatforms = 0
+
+while arrivals and departures remain:
+
+    if next train arrives before earliest departure:
+
+        currentPlatforms++
+
+        update maximumPlatforms
+
+        move arrival pointer
+
+    else:
+
+        currentPlatforms--
+
+        move departure pointer
+
+return maximumPlatforms
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n log n)
 Space Complexity: O(1)
 */
 
