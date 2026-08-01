@@ -1,8 +1,8 @@
 /*
 Problem: Maximum Meetings in One Room
 
-GeeksforGeeks:
-https://www.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1
+Source : 
+    https://takeuforward.org/plus/dsa/problems/n-meetings-in-one-room?source=strivers-a2z-dsa-track
 
 Goal:
 Given start and end times of meetings,

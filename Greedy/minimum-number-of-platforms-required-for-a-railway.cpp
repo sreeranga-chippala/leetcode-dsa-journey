@@ -1,8 +1,8 @@
 /*
 Problem: Minimum Platforms
 
-GeeksforGeeks:
-https://www.geeksforgeeks.org/problems/minimum-platforms-1587115620/1
+source : 
+    https://takeuforward.org/plus/dsa/problems/minimum-number-of-platforms-required-for-a-railway?source=strivers-a2z-dsa-track
 
 Goal:
 Given arrival and departure times of trains,
