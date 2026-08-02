@@ -27,8 +27,30 @@ Choosing the item with the highest profit per
 unit weight first always produces the maximum
 possible profit.
 
-Time Complexity: O(n log n)
+PseudoCode : 
 
+calculate profit per unit weight
+
+sort items in decreasing order
+of profit per unit weight
+
+for each item:
+
+    if item fits completely:
+
+        take entire item
+
+    else:
+
+        take required fraction
+
+        stop
+
+return total profit
+
+Complexity Analysis : 
+
+Time Complexity: O(n log n)
 Space Complexity: O(n)
 */
 
