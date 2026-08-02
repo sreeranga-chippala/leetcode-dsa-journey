@@ -1,9 +1,8 @@
 /*
 Problem: Fractional Knapsack
 
-GeeksforGeeks:
-https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1
-
+source : 
+    https://takeuforward.org/plus/dsa/problems/fractional-knapsack?source=strivers-a2z-dsa-track
 Goal:
 Given the profit and weight of each item,
 maximize the total profit that can be placed
