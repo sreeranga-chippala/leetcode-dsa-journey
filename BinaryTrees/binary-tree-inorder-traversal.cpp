@@ -30,8 +30,22 @@ Key Insight:
 Inorder always processes the root after
 completing the left subtree.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if node is null:
+
+    return
+
+traverse left subtree
+
+visit current node
+
+traverse right subtree
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 
 where h is the height of the tree.

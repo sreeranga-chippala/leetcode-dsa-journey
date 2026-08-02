@@ -30,8 +30,22 @@ Key Insight:
 Postorder processes the root only after both
 subtrees have been completely explored.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if node is null:
+
+    return
+
+traverse left subtree
+
+traverse right subtree
+
+visit current node
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 */
 #include <iostream>

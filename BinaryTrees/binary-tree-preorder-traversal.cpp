@@ -30,8 +30,21 @@ Key Insight:
 Preorder processes the root before visiting
 its children.
 
-Time Complexity: O(n)
+PseudoCode :
 
+if node is null:
+
+    return
+
+visit current node
+
+traverse left subtree
+
+traverse right subtree
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 */
 #include <iostream>
