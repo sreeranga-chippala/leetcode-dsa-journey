@@ -23,8 +23,35 @@ Key Insight:
 A queue naturally processes nodes in the
 same order they appear level by level.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if tree is empty:
+
+    return empty result
+
+push root into queue
+
+while queue is not empty:
+
+    get current level size
+
+    repeat for every node in this level:
+
+        remove front node
+
+        store its value
+
+        push left child
+
+        push right child
+
+    store current level
+
+return result
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 #include <iostream>
