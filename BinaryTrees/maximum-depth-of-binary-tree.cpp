@@ -28,8 +28,24 @@ Key Insight:
 The height of a tree depends on the taller
 of its two subtrees.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if node is null:
+
+    return 0
+
+find left subtree depth
+
+find right subtree depth
+
+return
+
+1 + maximum(left depth, right depth)
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 
 where h is the height of the tree.
