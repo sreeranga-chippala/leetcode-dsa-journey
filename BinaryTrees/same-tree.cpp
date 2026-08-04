@@ -37,8 +37,32 @@ Key Insight:
 Both the structure and the values of the trees
 must match at every node.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if both nodes are null:
+
+    return true
+
+if one node is null:
+
+    return false
+
+if node values are different:
+
+    return false
+
+compare left subtrees
+
+compare right subtrees
+
+return
+
+left comparison AND right comparison
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 
 where:
