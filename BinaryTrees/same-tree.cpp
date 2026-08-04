@@ -57,7 +57,7 @@ compare right subtrees
 
 return
 
-left comparison AND right comparison
+    left comparison AND right comparison
 
 
 Complexity Analysis : 
