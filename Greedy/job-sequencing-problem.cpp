@@ -37,11 +37,38 @@ Key Insight:
 Scheduling a profitable job as late as possible
 keeps earlier slots free for other jobs.
 
-Time Complexity:
-O(n log n + n × maxDeadline)
+PseudoCode : 
 
-Space Complexity:
-O(maxDeadline)
+sort jobs by profit in descending order
+
+find maximum deadline
+
+create empty time slots
+
+for every job:
+
+    try to place it in the latest free slot
+    before its deadline
+
+    if slot is free:
+
+        schedule job
+
+        increase job count
+
+        add profit
+
+return
+
+job count
+
+maximum profit
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n log n + n × maxDeadline)
+Space Complexity: O(maxDeadline)
 */
 
 #include<iostream>
