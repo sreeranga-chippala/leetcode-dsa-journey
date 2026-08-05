@@ -1,9 +1,8 @@
 /*
 Problem: Job Sequencing Problem
 
-GeeksforGeeks:
-https://www.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1
-
+source : 
+    https://takeuforward.org/plus/dsa/problems/job-sequencing-problem?source=strivers-a2z-dsa-track
 Goal:
 Each job has:
 - Job ID
