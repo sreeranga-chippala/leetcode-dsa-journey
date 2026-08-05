@@ -36,11 +36,31 @@ Key Insight:
 At every step, half of the remaining tree
 is discarded because of the BST property.
 
-Time Complexity:
-O(h)
+PseudoCode : 
 
-Space Complexity:
-O(1)
+current = root
+
+while current exists:
+
+    if value found:
+
+        return current
+
+    if target is greater:
+
+        move right
+
+    else:
+
+        move left
+
+return null
+
+
+Complexity Analysis : 
+
+Time Complexity:O(h)
+Space Complexity:O(1)
 
 where h is the tree height.
 */
