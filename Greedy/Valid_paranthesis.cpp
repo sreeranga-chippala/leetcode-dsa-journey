@@ -1,5 +1,4 @@
 /*
-
 Problem: Valid Parenthesis String
 
 LeetCode: https://leetcode.com/problems/valid-parenthesis-string/
