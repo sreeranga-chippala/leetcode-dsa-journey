@@ -37,8 +37,32 @@ The stack stores the path from the root
 to the current node, allowing us to return
 after finishing the left subtree.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+create empty stack
+
+current = root
+
+while current exists OR stack not empty:
+
+    while current exists:
+
+        push current
+
+        move left
+
+    pop stack
+
+    visit node
+
+    move right
+
+return result
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 
 where h is the height of the tree.
