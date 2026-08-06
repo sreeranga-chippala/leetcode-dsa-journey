@@ -37,8 +37,30 @@ A stack processes the most recently added node first,
 so pushing the right child before the left child
 preserves preorder traversal.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if tree is empty:
+
+    return empty result
+
+push root
+
+while stack is not empty:
+
+    pop node
+
+    visit node
+
+    push right child
+
+    push left child
+
+return result
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 */
 #include <iostream>
