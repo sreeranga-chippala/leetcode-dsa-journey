@@ -33,8 +33,28 @@ While computing heights, we can simultaneously
 check whether every node satisfies the balance
 condition.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if node is null:
+
+    return 0
+
+find left subtree height
+
+find right subtree height
+
+if height difference > 1:
+
+    tree is not balanced
+
+return
+
+1 + maximum(left height, right height)
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 
 where:
