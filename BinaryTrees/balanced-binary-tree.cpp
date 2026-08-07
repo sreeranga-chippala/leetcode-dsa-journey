@@ -126,4 +126,8 @@ int height(TreeNode* root){
 
     return 1 + max(left, right);
 }
+
+main bool isBalanced(TreeNode* root) {
+    return height(root) != -1;
+}
 */
