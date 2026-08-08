@@ -36,8 +36,28 @@ so while calculating the height of every node, we
 simultaneously check the longest path passing
 through that node.
 
-Time Complexity: O(n)
+PsuedoCode : 
 
+if node is null:
+
+    return 0
+
+find left subtree height
+
+find right subtree height
+
+path through current node =
+    left height + right height
+
+update maximum diameter
+
+return
+    1 + maximum(left height, right height)
+
+    
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 
 where:
