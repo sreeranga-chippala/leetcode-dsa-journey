@@ -86,12 +86,10 @@ public:
         }
 
         // Find height of left subtree
-        int left_height =
-            height(root->left, ans);
+        int left_height = height(root->left, ans);
 
         // Find height of right subtree
-        int right_height =
-            height(root->right, ans);
+        int right_height = height(root->right, ans);
 
         // Longest path passing through current node
         ans = max(ans,
