@@ -34,8 +34,53 @@ The queue always processes nodes from left to right.
 Instead of changing the queue order, we change where
 each node's value is placed in the current level.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+create empty answer
+
+if root is null:
+
+    return answer
+
+create queue
+push root
+
+leftToRight = true
+
+while queue is not empty:
+
+    get current level size
+
+    create array of that size
+
+    for every node in current level:
+
+        remove node from queue
+
+        if leftToRight:
+
+            index = current position
+
+        else:
+
+            index = size - current position - 1
+
+        place node value at index
+
+        push left child
+
+        push right child
+
+    reverse direction
+
+    add current level to answer
+
+return answer
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 #include <iostream>
