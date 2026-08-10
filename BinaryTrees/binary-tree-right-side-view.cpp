@@ -23,8 +23,36 @@ Because BFS processes each level from left
 to right, the LAST node of every level is the
 node visible from the right side.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if root is null:
+
+    return empty result
+
+push root into queue
+
+while queue is not empty:
+
+    get current level size
+
+    for every node in current level:
+
+        remove node
+
+        store its value as last value
+
+        push left child
+
+        push right child
+
+    add last value to answer
+
+return answer
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 #include <iostream>
