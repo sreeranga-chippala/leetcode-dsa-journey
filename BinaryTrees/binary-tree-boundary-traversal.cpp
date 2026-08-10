@@ -1,6 +1,17 @@
 /*
 Problem: Boundary Traversal of Binary Tree
 
+Source :-
+
+    LeetCode : 
+    https://leetcode.com/problems/boundary-of-binary-tree/
+
+    (or)
+
+    Strivers A-Z DSA Sheet : 
+    https://takeuforward.org/plus/dsa/problems/boundary-traversal?source=strivers-a2z-dsa-track
+    
+
 Goal:
 Return the boundary nodes of a binary tree
 in anti-clockwise order.
@@ -21,8 +32,61 @@ The left boundary and right boundary are traversed
 differently, while all leaf nodes are collected
 using DFS.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if root is null:
+
+    return empty result
+
+
+if root is not a leaf:
+
+    add root
+
+
+collect left boundary
+
+    start from root's left
+
+    while node exists:
+
+        if node is not leaf:
+
+            add node
+
+        prefer left child
+
+        otherwise move to right child
+
+
+collect all leaf nodes using DFS
+
+
+collect right boundary
+
+    start from root's right
+
+    while node exists:
+
+        if node is not leaf:
+
+            store node temporarily
+
+        prefer right child
+
+        otherwise move to left child
+
+
+reverse right boundary
+
+add it to answer
+
+return answer
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
                   plus output/storage
 */
