@@ -1,6 +1,10 @@
 /*
 Problem: Left View of Binary Tree
 
+Source : 
+    CCBP : 
+    https://learning.ccbp.in/question/ebd358f6-881b-43ed-87ca-847def1ff3be
+    
 Goal:
 Return the nodes visible when looking at the
 binary tree from the left side.
@@ -15,8 +19,36 @@ Your approach:
 - Therefore, the leftmost node is processed LAST.
 - Store the last processed node of every level.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if root is null:
+
+    return empty result
+
+push root
+
+while queue is not empty:
+
+    get level size
+
+    for i = 0 to level size - 1:
+
+        remove node
+
+        if i == 0:
+
+            add node to answer
+
+        push left child
+
+        push right child
+
+return answer
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 
