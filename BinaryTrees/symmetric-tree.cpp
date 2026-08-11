@@ -40,8 +40,32 @@ So compare:
 A.left  ↔ B.right
 A.right ↔ B.left
 
-Time Complexity: O(n)
+PseudoCode : 
+if both nodes are null:
 
+    return true
+
+if one node is null:
+
+    return false
+
+if values are different:
+
+    return false
+
+compare:
+
+    left of first ↔ right of second
+
+AND
+
+    right of first ↔ left of second
+
+return result
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 */
 #include <iostream>
