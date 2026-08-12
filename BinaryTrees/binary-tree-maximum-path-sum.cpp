@@ -46,8 +46,36 @@ both left and right because then the parent would
 be connected to two branches and create a path
 with more than one direction.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if node is null:
+
+    return 0
+
+find left contribution
+
+if left contribution < 0:
+
+    make it 0
+
+find right contribution
+
+if right contribution < 0:
+
+    make it 0
+
+current path =
+    node value + left + right
+
+update global maximum
+
+return
+    node value + max(left, right)
+
+    
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 */
 #include <iostream>
