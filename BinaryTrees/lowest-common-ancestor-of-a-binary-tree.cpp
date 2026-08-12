@@ -30,8 +30,33 @@ Key Insight:
 If p and q are found in different subtrees,
 the current node is their Lowest Common Ancestor.
 
-Time Complexity: O(n)
+PseudoCode : 
+if node is null OR node is p OR node is q:
 
+    return node
+
+search left subtree
+
+search right subtree
+
+if left is null:
+
+    return right
+
+if right is null:
+
+    return left
+
+if both left and right exist:
+
+    current node is LCA
+
+return current node
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 */
 #include <iostream>
