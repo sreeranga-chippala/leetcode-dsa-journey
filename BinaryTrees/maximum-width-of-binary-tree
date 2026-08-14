@@ -39,8 +39,46 @@ To prevent very large indices, we normalize
 the indices at every level by subtracting the
 first index of that level.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if root is null:
+
+    return 0
+
+push root with index 0
+
+while queue is not empty:
+
+    store index of first node in current level
+
+    get current level size
+
+    for every node in this level:
+
+        remove node
+
+        normalize its index
+
+        calculate current width
+
+        if left child exists:
+
+            push left child with
+            2 * index + 1
+
+        if right child exists:
+
+            push right child with
+            2 * index + 2
+
+    update maximum width
+
+return maximum width
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(n)
 */
 #include <iostream>
