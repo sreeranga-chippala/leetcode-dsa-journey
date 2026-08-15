@@ -30,19 +30,62 @@ Iterative BST Traversal
 Instead of using recursion, we maintain a
 temporary pointer 'temp' and move down the tree.
 
-Time Complexity:
-O(h)
+PseudoCode : 
+
+if root is NULL:
+
+    create new node
+
+    return new node
+
+
+current = root
+
+
+while true:
+
+    if val < current value:
+
+        if left child is NULL:
+
+            insert val as left child
+
+            break
+
+        current = current left child
+
+
+    else if val > current value:
+
+        if right child is NULL:
+
+            insert val as right child
+
+            break
+
+        current = current right child
+
+
+    else:
+
+        value already exists
+
+        return root
+
+
+return root
+
+
+Complexity Analysis : 
+
+Time Complexity: O(h)
 
 where h = height of the BST.
 
-Average case:
-O(log n)
+Average case: O(log n)
+Worst case: O(n)
 
-Worst case:
-O(n)
-
-Space Complexity:
-O(1)
+Space Complexity: O(1)
 
 The iterative approach does not use
 extra recursion stack space.
@@ -53,7 +96,7 @@ extra recursion stack space.
 using namespace std;
 
 struct TreeNode {
-     int val;
+    int val;
     TreeNode *left;
     TreeNode *right;
     TreeNode() : val(0), left(nullptr), right(nullptr) {}
