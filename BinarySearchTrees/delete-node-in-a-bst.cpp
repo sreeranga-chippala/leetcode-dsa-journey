@@ -47,20 +47,95 @@ Important:
 The root node needs special handling because it
 does not have a parent.
 
-Time Complexity:
-O(h)
+PseudoCode : 
 
-where h = height of the BST.
+if root is NULL:
 
-Average case:
-O(log n)
+    return root
 
-Worst case:
-O(n)
 
-Space Complexity:
-O(1)
+current = root
+parent = NULL
 
+
+while current is not NULL
+      and current value is not key:
+
+    parent = current
+
+    if key < current value:
+
+        current = current left child
+
+    else:
+
+        current = current right child
+
+
+if current is NULL:
+
+    return root
+
+
+if current has zero or one child:
+
+    child = current's existing child
+            or NULL if it has no child
+
+    if current is root:
+
+        delete current
+
+        return child
+
+
+    if current is parent's left child:
+
+        parent's left = child
+
+    else:
+
+        parent's right = child
+
+    delete current
+
+
+else:
+
+    successorParent = current
+    successor = current's right child
+
+    while successor has a left child:
+
+        successorParent = successor
+        successor = successor's left child
+
+
+    copy successor value into current
+
+
+    if successor is successorParent's left child:
+
+        successorParent's left = successor's right child
+
+    else:
+
+        successorParent's right = successor's right child
+
+    delete successor
+
+
+return root
+
+
+Complexity Analysis : 
+
+Time Complexity: O(h)
+    where h = height of the BST.
+Average case: O(log n)
+Worst case: O(n)
+
+Space Complexity: O(1)
 The solution uses iterative traversal.
 */
 
