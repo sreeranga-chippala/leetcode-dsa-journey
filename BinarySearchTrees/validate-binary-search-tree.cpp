@@ -78,36 +78,43 @@ return answer
 
 PseudoCode : 
 
-if root is NULL:
+function validate(node, minimum, maximum):
 
-    return
+    if node is NULL:
 
-
-inorder(left subtree)
-
-
-if count == k:
-
-    answer = current node value
+        return
 
 
-increment count
+    validate(left subtree,
+             minimum,
+             node value)
 
 
-inorder(right subtree)
+    if node value <= minimum
+       OR
+       node value >= maximum:
+
+        answer = false
+
+
+    validate(right subtree,
+             node value,
+             maximum)
 
 
 ------------------------------------------------
 
+answer = true
+
 if root is NULL:
 
-    return -1
+    return true
 
 
-count = 1
-answer = -1
+minimum = -infinity
+maximum = +infinity
 
-perform inorder traversal
+validate(root, minimum, maximum)
 
 return answer
 
