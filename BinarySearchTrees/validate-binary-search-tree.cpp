@@ -41,8 +41,80 @@ The bounds are exclusive because
 BST values must be strictly smaller or
 strictly greater.
 
-Time Complexity: O(n)
+PseudoCode : 
 
+if root is NULL:
+
+    return
+
+
+inorder(left subtree)
+
+
+if count == k:
+
+    answer = current node value
+
+
+increment count
+
+
+inorder(right subtree)
+
+
+------------------------------------------------
+
+if root is NULL:
+
+    return -1
+
+
+count = 1
+answer = -1
+
+perform inorder traversal
+
+return answer
+
+PseudoCode : 
+
+if root is NULL:
+
+    return
+
+
+inorder(left subtree)
+
+
+if count == k:
+
+    answer = current node value
+
+
+increment count
+
+
+inorder(right subtree)
+
+
+------------------------------------------------
+
+if root is NULL:
+
+    return -1
+
+
+count = 1
+answer = -1
+
+perform inorder traversal
+
+return answer
+
+
+Complexity Analysis : 
+
+Time Complexity: O(n)
 Space Complexity: O(h)
 
 where h = height of the tree.
