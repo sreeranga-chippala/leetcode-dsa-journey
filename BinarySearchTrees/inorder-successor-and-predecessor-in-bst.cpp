@@ -55,8 +55,29 @@ For Predecessor:
         Move LEFT.
 
 
-Time Complexity: O(h)
+PseudoCode : 
 
+set successor = -1
+
+while root is not NULL:
+
+    if root value > key:
+
+        successor = root value
+
+        move to left subtree
+
+    else:
+
+        move to right subtree
+
+
+return successor
+
+
+Complexity Analysis : 
+
+Time Complexity: O(h)
 Space Complexity: O(1)
 
 where h = height of the BST.
