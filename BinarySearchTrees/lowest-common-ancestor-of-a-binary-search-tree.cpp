@@ -25,8 +25,38 @@ For the current root:
 
        Therefore, current root is the LCA.
 
-Time Complexity: O(h)
+PseudoCode : 
 
+if root is NULL:
+
+    return NULL
+
+
+while root is not NULL:
+
+    if p and q are both smaller than root:
+
+        move root to left subtree
+
+
+    else if p and q are both greater than root:
+
+        move root to right subtree
+
+
+    else:
+
+        current root is the LCA
+
+        return root
+
+
+return NULL
+
+
+Complexity Analysis : 
+
+Time Complexity: O(h)
 Space Complexity: O(1)
 
 where h = height of the BST.
