@@ -36,20 +36,48 @@ For next():
 The stack always contains the nodes required
 to produce the next smallest element.
 
+PseudoCode : 
+
+function pushLeastNumber(root):
+
+    while root is not NULL:
+
+        push root into stack
+
+        root = root.left
+
+
+constructor(root):
+
+    pushLeastNumber(root)
+
+
+function next():
+
+    temp = top of stack
+
+    pop stack
+
+
+    if temp has right child:
+
+        pushLeastNumber(temp.right)
+
+
+    return temp value
+
+
+function hasNext():
+
+    return stack is not empty
+
+    
 Time Complexity:
+    Constructor : O(h)
+    next() : Amortized O(1)
+    hasNext() : O(1)
 
-    Constructor:
-        O(h)
-
-    next():
-        Amortized O(1)
-
-    hasNext():
-        O(1)
-
-Space Complexity:
-    O(h)
-
+Space Complexity : O(h)
 where h = height of the BST.
 */
 
