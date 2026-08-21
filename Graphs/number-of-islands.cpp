@@ -33,13 +33,65 @@ DFS explores in four directions:
     Left
     Right
 
-Time Complexity:
-O(r * c)
+PseudoCode : 
+
+create visited matrix filled with 0
+
+count = 0
+
+
+for every cell (i, j):
+
+    if grid[i][j] is land
+       and cell is not visited:
+
+        DFS(i, j)
+
+        count++
+
+
+DFS(i, j):
+
+    mark current cell as visited
+
+    if upper cell is valid
+       and contains land
+       and is not visited:
+
+        DFS(upper cell)
+
+
+    if lower cell is valid
+       and contains land
+       and is not visited:
+
+        DFS(lower cell)
+
+
+    if left cell is valid
+       and contains land
+       and is not visited:
+
+        DFS(left cell)
+
+
+    if right cell is valid
+       and contains land
+       and is not visited:
+
+        DFS(right cell)
+
+
+return count
+
+
+Complexity Analysis : 
+
+Time Complexity: O(r * c)
 
 Every cell is visited at most once.
 
-Space Complexity:
-O(r * c)
+Space Complexity: O(r * c)
 
 Visited matrix requires O(r * c) space.
 The DFS recursion stack can also take O(r * c)
