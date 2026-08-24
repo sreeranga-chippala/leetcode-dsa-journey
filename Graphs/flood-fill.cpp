@@ -46,47 +46,47 @@ it is no longer equal to originalColor.
 Therefore, it cannot be visited again.
 
 PsuedoCode : 
+FloodFill : 
+    originalColor = image[sr][sc]
 
-originalColor = image[sr][sc]
+    if originalColor == new color:
 
-if originalColor == new color:
+        return image
+
+
+    DFS(sr, sc)
+
+
+    DFS(i, j):
+
+        change image[i][j] to new color
+
+
+        if upper cell is inside grid
+        and has original color:
+
+            DFS(upper cell)
+
+
+        if lower cell is inside grid
+        and has original color:
+
+            DFS(lower cell)
+
+
+        if left cell is inside grid
+        and has original color:
+
+            DFS(left cell)
+
+
+        if right cell is inside grid
+        and has original color:
+
+            DFS(right cell)
+
 
     return image
-
-
-DFS(sr, sc)
-
-
-DFS(i, j):
-
-    change image[i][j] to new color
-
-
-    if upper cell is inside grid
-       and has original color:
-
-        DFS(upper cell)
-
-
-    if lower cell is inside grid
-       and has original color:
-
-        DFS(lower cell)
-
-
-    if left cell is inside grid
-       and has original color:
-
-        DFS(left cell)
-
-
-    if right cell is inside grid
-       and has original color:
-
-        DFS(right cell)
-
-
-return image
 
 
 Complexity Analysis : 
