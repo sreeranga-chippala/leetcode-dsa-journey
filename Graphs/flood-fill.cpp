@@ -45,14 +45,58 @@ it is no longer equal to originalColor.
 
 Therefore, it cannot be visited again.
 
-Time Complexity:
-O(rows * cols)
+PsuedoCode : 
+
+originalColor = image[sr][sc]
+
+if originalColor == new color:
+
+    return image
+
+
+DFS(sr, sc)
+
+
+DFS(i, j):
+
+    change image[i][j] to new color
+
+
+    if upper cell is inside grid
+       and has original color:
+
+        DFS(upper cell)
+
+
+    if lower cell is inside grid
+       and has original color:
+
+        DFS(lower cell)
+
+
+    if left cell is inside grid
+       and has original color:
+
+        DFS(left cell)
+
+
+    if right cell is inside grid
+       and has original color:
+
+        DFS(right cell)
+
+
+return image
+
+
+Complexity Analysis : 
+
+Time Complexity: O(rows * cols)
 
 In the worst case, every pixel belongs to
 the connected component.
 
-Space Complexity:
-O(rows * cols)
+Space Complexity: O(rows * cols)
 
 Due to the recursive DFS call stack in the
 worst case.
