@@ -29,15 +29,39 @@ Steps:
 
 5. Continue until all reachable nodes are visited.
 
-Time Complexity:
-O(V + E)
+PseudoCode : 
+
+create visited array
+create answer array
+
+
+DFS(current):
+
+    add current to answer
+
+    mark current as visited
+
+    for every neighbor of current:
+
+        if neighbor is not visited:
+
+            DFS(neighbor)
+
+
+start DFS from node 0
+
+return answer
+
+
+Complexity Analysis : 
+
+Time Complexity: O(V + E)
 
 where:
 V = number of vertices
 E = number of edges
 
-Space Complexity:
-O(V)
+Space Complexity: O(V)
 
 for the visited array and recursion stack.
 */
