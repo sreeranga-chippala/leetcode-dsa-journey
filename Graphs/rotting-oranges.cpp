@@ -58,13 +58,61 @@ After BFS:
         return the maximum time.
 
 
-Time Complexity:
-O(m * n)
+PseudoCode : 
+
+create visited matrix
+
+create queue
+
+for every cell:
+
+    if cell contains rotten orange:
+
+        mark it visited
+
+        push cell with time 0
+
+
+while queue is not empty:
+
+    remove front cell
+
+    get row, column and time
+
+    update maximum time
+
+
+    for each of the four directions:
+
+        if neighboring cell is inside grid
+           and contains fresh orange
+           and is not visited:
+
+            mark it visited
+
+            push neighboring cell
+            with time + 1
+
+
+for every cell:
+
+    if cell contains fresh orange
+       and is not visited:
+
+        return -1
+
+
+return maximum time
+
+
+
+Complexity Analysis : 
+
+Time Complexity: O(m * n)
 
 Every cell is processed at most once.
 
-Space Complexity:
-O(m * n)
+Space Complexity: O(m * n)
 
 For the visited matrix and BFS queue.
 */
