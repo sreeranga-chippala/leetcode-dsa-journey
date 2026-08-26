@@ -53,11 +53,53 @@ The graph may be disconnected.
 Therefore, we start DFS from every node
 that is still uncolored.
 
-Time Complexity:
-O(V + E)
+PseudoCode : 
 
-Space Complexity:
-O(V)
+create color array of size n
+
+initialize every color to -1
+
+
+DFS(current, currentColor):
+
+    color[current] = currentColor
+
+    for every neighbor of current:
+
+        if neighbor is uncolored:
+
+            if DFS(
+                neighbor,
+                opposite color
+            ) is false:
+
+                return false
+
+
+        else if neighbor has same color as current:
+
+            return false
+
+
+    return true
+
+
+for every node:
+
+    if node is uncolored:
+
+        if DFS(node, 0) is false:
+
+            return false
+
+
+return true
+
+
+Complexity Analysis : 
+
+Time Complexity: O(V + E)
+Space Complexity: O(V)
 
 V = number of vertices
 E = number of edges
