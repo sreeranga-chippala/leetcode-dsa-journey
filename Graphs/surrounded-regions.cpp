@@ -51,11 +51,53 @@ Therefore, it cannot be surrounded.
 Only unvisited O's are completely enclosed.
 
 
-Time Complexity:
-O(m * n)
+PseudoCode : 
 
-Space Complexity:
-O(m * n)
+create visited matrix
+
+
+for every cell on LEFT and RIGHT boundary:
+
+    if cell is O and not visited:
+
+        DFS(cell)
+
+
+for every cell on TOP and BOTTOM boundary:
+
+    if cell is O and not visited:
+
+        DFS(cell)
+
+
+DFS(r, c):
+
+    mark current cell as visited
+
+    explore:
+        UP
+        DOWN
+        LEFT
+        RIGHT
+
+    only continue through O cells
+
+
+for every interior cell:
+
+    if cell is O
+       and not visited:
+
+        change O to X
+
+
+return board
+
+
+Complexity Analysis : 
+
+Time Complexity: O(m * n)
+Space Complexity: O(m * n)
 
 For the visited matrix and recursion stack.
 */
