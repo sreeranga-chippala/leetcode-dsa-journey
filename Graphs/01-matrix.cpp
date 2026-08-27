@@ -44,14 +44,51 @@ Queue stores:
     { {row, column}, distance }
 
 
-Time Complexity:
-O(m * n)
+PseudoCode : 
 
+create visited matrix
+create queue
+
+
+for every cell:
+
+    if cell == 0:
+
+        mark visited
+
+        push cell with distance 0
+
+
+while queue is not empty:
+
+    remove front cell
+
+    get row, column and distance
+
+    set matrix[row][column] = distance
+
+
+    for each of four directions:
+
+        if neighbor is inside grid
+           and neighbor is not visited
+           and neighbor contains 1:
+
+            mark neighbor visited
+
+            push neighbor
+            with distance + 1
+
+
+return matrix
+
+
+Complexity Analysis : 
+
+Time Complexity: O(m * n)
 Every cell is processed at most once.
 
-Space Complexity:
-O(m * n)
-
+Space Complexity: O(m * n)
 For visited matrix and queue.
 */
 
