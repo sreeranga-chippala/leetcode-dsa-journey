@@ -49,14 +49,72 @@ Steps:
 5. Count those cells.
 
 
-Time Complexity:
-O(m * n)
+PseudoCode : 
 
+create visited matrix
+
+
+for every row:
+
+    if left boundary is land
+       and not visited:
+
+        DFS(left boundary)
+
+
+    if right boundary is land
+       and not visited:
+
+        DFS(right boundary)
+
+
+for every column:
+
+    if top boundary is land
+       and not visited:
+
+        DFS(top boundary)
+
+
+    if bottom boundary is land
+       and not visited:
+
+        DFS(bottom boundary)
+
+
+DFS(r, c):
+
+    mark current cell as visited
+
+    explore:
+        UP
+        DOWN
+        LEFT
+        RIGHT
+
+    only move to unvisited land cells
+
+
+count = 0
+
+
+for every interior cell:
+
+    if cell is land
+       and not visited:
+
+        count++
+
+
+return count
+
+
+Complexity Analysis : 
+
+Time Complexity: O(m * n)
 Every cell is visited at most once.
 
-Space Complexity:
-O(m * n)
-
+Space Complexity: O(m * n)
 For the visited matrix and DFS recursion stack.
 */
 
