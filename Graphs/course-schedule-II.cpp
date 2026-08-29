@@ -41,11 +41,64 @@ Steps:
            return empty vector
 
 
-Time Complexity:
-O(V + E)
+PseudoCode : 
 
-Space Complexity:
-O(V + E)
+create adjacency list
+
+
+for every prerequisite [course, prerequisite]:
+
+    add course to adjacency list
+    of prerequisite
+
+
+create indegree array
+
+
+for every edge:
+
+    increase indegree of destination
+
+
+create queue
+
+
+for every node:
+
+    if indegree[node] == 0:
+
+        push node
+
+
+while queue is not empty:
+
+    node = remove front
+
+    add node to answer
+
+
+    for every neighbor:
+
+        decrease indegree[neighbor]
+
+        if indegree[neighbor] == 0:
+
+            push neighbor
+
+
+if answer contains all nodes:
+
+    return answer
+
+else:
+
+    return empty array
+
+    
+Complexity Analysis : 
+
+Time Complexity: O(V + E)
+Space Complexity: O(V + E)
 
 V = number of courses
 E = number of prerequisites
