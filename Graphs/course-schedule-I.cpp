@@ -79,11 +79,69 @@ Therefore, no node has indegree 0,
 so BFS cannot start processing the cycle.
 
 
-Time Complexity:
-O(V + E)
+PseudoCode : 
 
-Space Complexity:
-O(V + E)
+create adjacency list
+
+
+for every prerequisite [course, prerequisite]:
+
+    add course to adjacency list
+    of prerequisite
+
+
+create indegree array
+
+
+for every node:
+
+    for every neighbor:
+
+        increase indegree[neighbor]
+
+
+create queue
+
+
+for every node:
+
+    if indegree[node] == 0:
+
+        push node into queue
+
+
+count = 0
+
+
+while queue is not empty:
+
+    node = remove front
+
+    count++
+
+
+    for every neighbor of node:
+
+        decrease indegree[neighbor]
+
+        if indegree[neighbor] == 0:
+
+            push neighbor
+
+
+if count == number of courses:
+
+    return true
+
+else:
+
+    return false
+
+    
+Complexity Analysis : 
+
+Time Complexity: O(V + E)
+Space Complexity: O(V + E)
 
 V = number of courses
 E = number of prerequisites
