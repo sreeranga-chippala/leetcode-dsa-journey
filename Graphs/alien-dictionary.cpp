@@ -99,6 +99,74 @@ Kahn's Algorithm:
    push it into the queue.
 
 
+PseudoCode : 
+
+create adjacency list of k characters
+
+
+for every adjacent pair of words:
+
+    word1 = current word
+    word2 = next word
+
+    find minimum length
+
+
+    for every position:
+
+        if word1[position]
+           != word2[position]:
+
+            add edge:
+
+                word1[position]
+                    →
+                word2[position]
+
+            break
+
+
+create indegree array
+
+
+for every node:
+
+    for every neighbor:
+
+        increase indegree[neighbor]
+
+
+create queue
+
+
+for every character:
+
+    if indegree[character] == 0:
+
+        push character
+
+
+while queue is not empty:
+
+    remove character
+
+    add character to answer
+
+
+    for every neighbor:
+
+        decrease indegree[neighbor]
+
+        if indegree[neighbor] == 0:
+
+            push neighbor
+
+
+convert node numbers to characters
+
+return answer
+
+
 Complexity Analysis : 
 
 Time Complexity: O(N * L + K + E)
