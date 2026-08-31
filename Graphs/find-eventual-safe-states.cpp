@@ -69,18 +69,63 @@ completes without finding a cycle from that node.
 Finally, sort the answer because the problem
 requires nodes in increasing order.
 
+PseudoCode : 
 
-Time Complexity:
-O(V + E + V log V)
+create visited array
 
-DFS:
-O(V + E)
+create path array
 
-Sorting:
-O(V log V)
+create answer array
 
-Space Complexity:
-O(V)
+
+DFS(current):
+
+    mark current as visited
+
+    mark current as part of current DFS path
+
+
+    for every neighbor of current:
+
+        if neighbor is not visited:
+
+            if DFS(neighbor) finds cycle:
+
+                return true
+
+
+        else if neighbor is in current DFS path:
+
+            return true
+
+
+    remove current from current DFS path
+
+    add current to answer
+
+    return false
+
+
+for every node:
+
+    if node is not visited:
+
+        DFS(node)
+
+
+sort answer
+
+return answer
+
+
+Complexity Analysis : 
+
+Time Complexity: O(V + E + V log V)
+
+    DFS: O(V + E)
+    Sorting: O(V log V)
+
+Space Complexity: O(V)
 
 For visited array, path array, answer array,
 and recursive DFS stack.
