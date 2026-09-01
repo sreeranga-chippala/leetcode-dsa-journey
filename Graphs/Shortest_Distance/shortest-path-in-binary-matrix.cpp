@@ -54,14 +54,54 @@ the queue.
 Important:
 There are 8 possible directions.
 
-Time Complexity:
-O(m * n)
+PseudoCode : 
 
+if starting cell is blocked
+   or ending cell is blocked:
+
+    return -1
+
+
+create distance matrix
+initialize every distance to infinity
+
+
+distance[0][0] = 1
+
+create queue
+
+push (0, 0, distance 1)
+
+
+while queue is not empty:
+
+    remove current cell
+
+    for each of 8 directions:
+
+        if neighbor is inside grid
+           and neighbor is 0
+           and new distance is smaller:
+
+            update neighbor distance
+
+            push neighbor into queue
+
+
+if destination distance is infinity:
+
+    return -1
+
+
+return destination distance
+
+
+Complexity Analysis : 
+
+Time Complexity: O(m * n)
 Every cell can be processed a bounded number of times.
 
-Space Complexity:
-O(m * n)
-
+Space Complexity: O(m * n)
 For the distance matrix and BFS queue.
 */
 
