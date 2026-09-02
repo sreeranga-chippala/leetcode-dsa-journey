@@ -66,6 +66,58 @@ Important:
 The final answer is the maximum shortest distance
 because the signal must reach EVERY node.
 
+PseudoCode : 
+
+create weighted adjacency list
+
+create min-heap
+
+create distance array
+initialize all distances to infinity
+
+distance[source] = 0
+
+push {0, source} into min-heap
+
+
+while heap is not empty:
+
+    remove node with minimum distance
+
+    if this distance is outdated:
+
+        continue
+
+
+    for every neighbor:
+
+        newDistance =
+            distance[node] + edgeWeight
+
+        if newDistance < distance[neighbor]:
+
+            distance[neighbor] = newDistance
+
+            push {newDistance, neighbor}
+
+
+answer = 0
+
+
+for every node:
+
+    if distance[node] is infinity:
+
+        return -1
+
+    answer =
+        max(answer, distance[node])
+
+
+return answer
+
+
+Complexity Analysis : 
 
 Time Complexity: O((V + E) log V)
 Space Complexity: O(V + E)
