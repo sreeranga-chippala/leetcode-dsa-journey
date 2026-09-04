@@ -80,8 +80,42 @@ The problem has two requirements:
 Therefore, while traversing the graph, we need
 to track both the cost and the number of flights.
 
-Time Complexity: O(K * E)
+PseudoCode : 
 
+Create adjacency list from all flights
+
+Set source distance to 0
+
+Push source into queue with:
+    flights taken = 1
+    cost = 0
+
+while queue is not empty:
+
+    get current city, cost and flights taken
+
+    for each neighboring city:
+
+        calculate new cost
+
+        if new cost is cheaper
+        AND allowed flight limit is not exceeded:
+
+            update cheapest cost
+
+            push neighboring city into queue
+            with updated cost and flight count
+
+if destination is unreachable:
+
+    return -1
+
+return cheapest cost
+
+
+Complexity Analysis : 
+
+Time Complexity: O(K * E)
 Space Complexity: O(N + K * E)
 
 where:
