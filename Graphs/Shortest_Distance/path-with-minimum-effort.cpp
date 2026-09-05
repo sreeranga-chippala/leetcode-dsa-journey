@@ -99,8 +99,37 @@ Here, the path cost is the maximum edge effort:
 So this is Dijkstra with a different
 path-cost calculation.
 
-Time Complexity: O(M * N * log(M * N))
+PseudoCode : 
 
+Set effort of starting cell to 0
+
+Push starting cell into min-heap
+
+while min-heap is not empty:
+
+    take cell with minimum effort
+
+    for each valid neighboring cell:
+
+        calculate height difference
+
+        new effort =
+            maximum of current effort
+            and height difference
+
+        if new effort is smaller
+        than neighbor's known effort:
+
+            update neighbor's effort
+
+            push neighbor into min-heap
+
+return effort of bottom-right cell
+
+
+Complexity Analysis : 
+
+Time Complexity: O(M * N * log(M * N))
 Space Complexity: O(M * N)
 
 where:
