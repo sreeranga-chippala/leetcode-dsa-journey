@@ -131,7 +131,7 @@ while min-heap is not empty:
             add paths of current city
             to paths of neighbor
 
-            take modulo 1,000,000,007
+            take modulo 10^9 + 7
 
 return paths[destination]
 
