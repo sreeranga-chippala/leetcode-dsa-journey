@@ -97,8 +97,48 @@ Therefore:
     Shorter path  → replace paths
     Equal path    → add paths
 
-Time Complexity: O((N + E) * log N)
 
+PseudoCode : 
+
+Create an undirected adjacency list
+
+Set:
+
+    distance[source] = 0
+    paths[source] = 1
+
+Push source into min-heap
+
+while min-heap is not empty:
+
+    take city with minimum distance
+
+    for each neighboring city:
+
+        calculate new distance
+
+        if new distance is smaller:
+
+            update shortest distance
+
+            set paths of neighbor
+            equal to paths of current city
+
+            push neighbor into min-heap
+
+        else if new distance is equal:
+
+            add paths of current city
+            to paths of neighbor
+
+            take modulo 1,000,000,007
+
+return paths[destination]
+
+
+Complexity Analysis : 
+
+Time Complexity: O((N + E) * log N)
 Space Complexity: O(N + E)
 
 where:
