@@ -90,8 +90,52 @@ Finally:
             ↓
     greatest index in case of tie
 
-Time Complexity: O(N^3)
 
+PseudoCode : 
+
+initialize distance between every pair as infinity
+
+for every edge:
+
+    set distance between the two cities
+
+set distance of every city to itself as 0
+
+
+for every intermediate city k:
+
+    for every source city i:
+
+        for every destination city j:
+
+            update shortest distance:
+
+                distance[i][j] =
+                min(distance[i][j],
+                    distance[i][k] + distance[k][j])
+
+
+set minimum reachable cities to infinity
+
+start answer from city n - 1
+
+for cities from n - 1 down to 0:
+
+    count cities whose distance
+    is within the threshold
+
+    if count is smaller than minimum:
+
+        update minimum count
+        update answer
+
+
+return answer
+
+
+Complexity Analysis : 
+
+Time Complexity: O(N^3)
 Space Complexity: O(N^2)
 
 where:
