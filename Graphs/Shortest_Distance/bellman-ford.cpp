@@ -1,6 +1,9 @@
 /*
 Problem: Bellman-Ford Algorithm
 
+Source : 
+https://takeuforward.org/plus/dsa/problems/bellman-ford-algorithm?source=strivers-a2z-dsa-track
+
 Goal:
 Find the shortest distance from the given source vertex
 to every other vertex in a weighted directed graph.
@@ -51,8 +54,33 @@ The extra Nth pass is used only for detection:
     If an edge can still be relaxed,
     a negative cycle is reachable from the source.
 
-Time Complexity: O(N * E)
 
+PseudoCode : 
+
+Set distance of every vertex to INF
+Set distance of source to 0
+
+Repeat N - 1 times:
+
+    for every edge (a, b, weight):
+
+        if a is reachable
+        and distance[a] + weight < distance[b]:
+
+            update distance[b]
+
+Perform one more pass over all edges:
+
+    if any edge can still be relaxed:
+
+        return -1
+
+Return all shortest distances
+
+
+Complexity Analysis : 
+
+Time Complexity: O(N * E)
 Space Complexity: O(N)
 
 where:
