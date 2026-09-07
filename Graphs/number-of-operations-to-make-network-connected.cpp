@@ -49,8 +49,31 @@ The initial check:
 immediately tells us that there are not enough cables
 to connect the entire network.
 
-Time Complexity: O(N + E)
+PseudoCode : 
 
+If number of connections < N - 1:
+    return -1
+
+Build an undirected adjacency list
+
+Mark all computers as unvisited
+
+components = 0
+
+For every computer:
+
+    If computer is unvisited:
+
+        components++
+
+        Run DFS to visit its entire component
+
+Return components - 1
+
+
+Complexity Analysis : 
+
+Time Complexity: O(N + E)
 Space Complexity: O(N + E)
 
 where:
