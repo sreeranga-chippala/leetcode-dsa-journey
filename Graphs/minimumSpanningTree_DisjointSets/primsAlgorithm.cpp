@@ -42,8 +42,37 @@ At every step:
 The visited array prevents adding a vertex more than once,
 which also prevents cycles in the resulting spanning tree.
 
-Time Complexity: O(E log E)
+PseudoCode : 
 
+Mark every vertex as unvisited
+
+Create a min heap of:
+    edge weight, vertex, parent
+
+Start from vertex 0 with weight 0
+
+While heap is not empty:
+
+    Select the minimum-weight edge
+
+    If the vertex is already visited:
+        skip it
+
+    Otherwise:
+
+        mark the vertex as visited
+        add edge weight to MST total
+
+        for every unvisited neighbor:
+
+            add its edge to the min heap
+
+Return total MST weight
+
+
+Complexity Analysis : 
+
+Time Complexity: O(E log E)
 Space Complexity: O(V + E)
 
 where:
