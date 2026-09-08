@@ -93,8 +93,28 @@ then exactly:
 
 connections are required to join them.
 
-Time Complexity: O(E * α(N))
+PseudoCode : 
 
+If number of connections < N - 1:
+    return -1
+
+Create a DSU for all computers
+
+For every connection (a, b):
+
+    Find the roots of a and b
+
+    If they belong to different components:
+        merge the smaller component into the larger one
+
+Count the number of component roots
+
+Return components - 1
+
+
+Complexity Analysis : 
+
+Time Complexity: O(E * α(N))
 Space Complexity: O(N)
 
 where:
