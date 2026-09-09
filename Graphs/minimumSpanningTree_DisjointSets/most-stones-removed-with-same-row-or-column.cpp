@@ -64,8 +64,30 @@ their component root.
 Union by Size:
 The smaller component is attached to the larger component.
 
-Time Complexity: O(N^2 * α(N))
+PseudoCode : 
 
+Create a DSU for all stones
+
+For every pair of stones:
+
+    If they share the same row
+    OR
+    they share the same column:
+
+        merge their components
+
+Count the number of connected components
+
+Every component must keep one stone
+
+Return:
+
+    total stones - number of components
+
+    
+Complexity Analysis : 
+
+Time Complexity: O(N^2 * α(N))
 Space Complexity: O(N)
 
 where:
