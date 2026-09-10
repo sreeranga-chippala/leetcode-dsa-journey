@@ -47,8 +47,41 @@ For every different neighboring island that gets merged:
 Therefore, we maintain the island count dynamically
 instead of running DFS/BFS after every operation.
 
-Time Complexity: O(K * α(N*M))
+PseudoCode : 
 
+Create DSU for all grid cells
+Mark every cell as water
+
+islands = 0
+
+For every land addition (r, c):
+
+    If the cell is already land:
+        record current islands
+        continue
+
+    Mark cell as land
+    islands++
+
+    Convert (r, c) into a DSU node
+
+    For each of the four neighboring cells:
+
+        If neighbor is land:
+
+            If both cells belong to different components:
+
+                merge them
+                islands--
+
+    Record islands
+
+Return all recorded island counts
+
+
+Complexity Analysis : 
+
+Time Complexity: O(K * α(N*M))
 Space Complexity: O(N*M + K)
 
 where:
