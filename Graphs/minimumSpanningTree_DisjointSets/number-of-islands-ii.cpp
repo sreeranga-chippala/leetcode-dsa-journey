@@ -2,7 +2,7 @@
 Problem: Number of Islands II
 
 Reference:
-https://www.geeksforgeeks.org/problems/number-of-islands/1
+https://takeuforward.org/plus/dsa/problems/number-of-islands-ii?source=strivers-a2z-dsa-track
 
 Goal:
 Given an initially empty N × M grid, land cells are added
