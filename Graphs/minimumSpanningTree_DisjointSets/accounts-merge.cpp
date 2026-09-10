@@ -60,8 +60,43 @@ For example:
 
 Then all three accounts belong to the same component.
 
-Time Complexity: O(T * α(N) + S log S)
+PseudoCode : 
 
+Create DSU for all accounts
+
+Create a map:
+    email → first account containing that email
+
+For every account:
+
+    For every email:
+
+        If email is seen for the first time:
+            store email → account
+
+        Otherwise:
+            merge current account
+            with the account stored for that email
+
+Create a collection for each DSU root
+
+For every email:
+
+    Find its account root
+    Add email to that root's collection
+
+For every root account:
+
+    Sort its emails
+    Add the account name
+    Add the merged account to the answer
+
+Return merged accounts
+
+
+Complexity Analysis : 
+
+Time Complexity: O(T * α(N) + S log S)
 Space Complexity: O(N + T)
 
 where:
