@@ -62,8 +62,43 @@ The word DISTINCT is critical.
 If two neighboring cells belong to the same island,
 that island's size must be added only once.
 
-Time Complexity: O(N² * α(N²))
+PseudoCode : 
 
+Create DSU for all N² cells
+
+For every land cell:
+
+    Union it with its lower land neighbor
+    Union it with its right land neighbor
+
+For every water cell:
+
+    Create an empty set of island roots
+    Set area = 1
+
+    Check all four neighbors:
+
+        If neighbor is land:
+
+            Find its island root
+            Add the root to the set
+
+    For every distinct root:
+
+        Add its island size to area
+
+    Update maximum area
+
+If no water cell exists:
+
+    return N²
+
+Return maximum area
+
+
+Complexity Analysis : 
+
+Time Complexity: O(N² * α(N²))
 Space Complexity: O(N²)
 
 where:
