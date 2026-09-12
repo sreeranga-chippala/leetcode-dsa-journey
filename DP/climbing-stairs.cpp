@@ -62,8 +62,27 @@ The problem follows the Fibonacci-style recurrence:
 Only the previous two DP states are required, so the
 full DP array can be eliminated.
 
-Time Complexity: O(N)
+PseudoCode : 
 
+If N is 0 or 1:
+    return 1
+
+Set ways_two_steps_before = 1
+Set ways_one_step_before = 1
+
+For each stair from 2 to N:
+
+    current = ways_one_step_before
+               + ways_two_steps_before
+
+    Move the two previous states forward
+
+Return current
+
+
+Complexity Analysis : 
+
+Time Complexity: O(N)
 Space Complexity: O(1)
 
 where:
