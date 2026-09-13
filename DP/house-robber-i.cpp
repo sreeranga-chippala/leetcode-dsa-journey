@@ -55,8 +55,30 @@ At every house, the decision is:
 
 Take the maximum of the two.
 
-Time Complexity: O(N)
+PseudoCode : 
 
+If there is only one house:
+    return its money
+
+Set:
+    prior2 = money from first house
+    prior1 = best money from first two houses
+
+For every house from index 2:
+
+    pick = current money + prior2
+    not_pick = prior1
+
+    current = maximum of pick and not_pick
+
+    Move previous states forward
+
+Return current
+
+
+Complexity Analysis : 
+
+Time Complexity: O(N)
 Space Complexity: O(1)
 
 where:
