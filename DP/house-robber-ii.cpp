@@ -60,8 +60,25 @@ breaking the circle into separate cases.
           ↓
     Two linear House Robber problems
 
-Time Complexity: O(N)
+PseudoCode : 
 
+If there is only one house:
+    return its money
+
+Case 1:
+    Solve linear House Robber
+    using houses 0 to N-2
+
+Case 2:
+    Solve linear House Robber
+    using houses 1 to N-1
+
+Return the maximum of the two cases
+
+
+Complexity Analysis : 
+
+Time Complexity: O(N)
 Space Complexity: O(1)
 
 where:
