@@ -77,8 +77,27 @@ So:
 
     Current paths = Above paths + Left paths
 
-Time Complexity: O(M * N)
 
+PseudoCode : 
+
+Create an M × N DP table
+
+Set every cell in the first row to 1
+Set every cell in the first column to 1
+
+For every remaining cell:
+
+    paths from above = dp[i-1][j]
+    paths from left  = dp[i][j-1]
+
+    dp[i][j] = paths from above + paths from left
+
+Return dp[M-1][N-1]
+
+
+Complexity Analysis : 
+
+Time Complexity: O(M * N)
 Space Complexity: O(M * N)
 
 where:
