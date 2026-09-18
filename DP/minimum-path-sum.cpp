@@ -65,8 +65,35 @@ here we take the MINIMUM of the possible previous paths.
 
 Memoization ensures every cell is solved only once.
 
-Time Complexity: O(M * N)
+PseudoCode : 
 
+Create DP table initialized to -1
+
+Start from bottom-right cell
+
+If cell is outside the grid:
+    return infinity
+
+If cell is the starting cell:
+    return its value
+
+If result for current cell is already known:
+    return stored result
+
+left = solve(i, j-1)
+above = solve(i-1, j)
+
+Choose the smaller previous path
+
+current answer =
+    current cell value + minimum(left, above)
+
+Store and return the result
+
+
+Complexity Analysis : 
+
+Time Complexity: O(M * N)
 Space Complexity: O(M * N)
 
 where:
