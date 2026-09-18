@@ -67,8 +67,35 @@ but obstacles contribute:
 
 Memoization prevents recalculating the same cells.
 
-Time Complexity: O(M * N)
+PseudoCode : 
 
+Create DP table initialized to -1
+
+Start from bottom-right cell
+
+If cell is outside the grid:
+    return 0
+
+If cell is an obstacle:
+    return 0
+
+If cell is the starting cell:
+    return 1
+
+If result for current cell is already known:
+    return stored result
+
+paths_from_left = solve(i, j-1)
+paths_from_above = solve(i-1, j)
+
+Store and return:
+
+    paths_from_left + paths_from_above
+
+    
+Complexity Analysis : 
+
+Time Complexity: O(M * N)
 Space Complexity: O(M * N)
 
 where:
