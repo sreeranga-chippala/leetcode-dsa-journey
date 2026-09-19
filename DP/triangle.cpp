@@ -68,8 +68,28 @@ Eventually:
 
 contains the minimum path sum from the top to the bottom.
 
-Time Complexity: O(N²)
+PseudoCode : 
 
+Copy the last row into DP
+
+For every row from bottom to top:
+
+    For every element in that row:
+
+        Choose the smaller of:
+            DP value directly below
+            DP value diagonally below-right
+
+        Add the current triangle value
+
+        Store the result in DP
+
+Return DP[0]
+
+
+Complexity Analysis : 
+
+Time Complexity: O(N²)
 Space Complexity: O(N)
 
 where:
